@@ -5,7 +5,7 @@ using System.Collections.Generic;
 [CardMeta(deck = Deck.eili, rarity = Rarity.common, upgradesTo = new Upgrade[] {Upgrade.A, Upgrade.B})]
 public class StunShot : Card
 {
-  public override string Name() => "Stun Beam";
+  public override string Name() => "Plan Ahead";
 
   public override CardData GetData(State state)
   {
@@ -15,13 +15,13 @@ public class StunShot : Card
     switch (upgrade1)
     {
       case Upgrade.None:
-        num = 1;
+        num = 0;
         break;
       case Upgrade.A:
-        num = 2;
+        num = 1;
         break;
       case Upgrade.B:
-        num = 3;
+        num = 2;
         break;
       default:
         // ISSUE: reference to a compiler-generated method
@@ -48,7 +48,7 @@ public class StunShot : Card
         break;
     }
     data.exhaust = flag;
-    data.art = new Spr?(Spr.cards_StunCharge);
+    data.art = new Spr?(Spr.cards_ShuffleShot);
     return data;
   }
 
@@ -60,11 +60,11 @@ public class StunShot : Card
     {
       case Upgrade.None:
         List<CardAction> cardActionList1 = new List<CardAction>();
-        cardActionList1.Add((CardAction) new AAttack()
+        cardActionList1.Add((CardAction) new AStatus()
         {
-          damage = this.GetDmg(s, 0),
-          piercing = true
-          stunEnemy = true
+          status = Status.drawNextTurn,
+          statusAmount = 1,
+          targetPlayer = true
         });
         actions = cardActionList1;
         break;
@@ -72,27 +72,23 @@ public class StunShot : Card
         List<CardAction> cardActionList2 = new List<CardAction>();
         cardActionList2.Add((CardAction) new AAttack()
         {
-          damage = this.GetDmg(s, 0),
-          piercing = true
-          stunEnemy = true
-          damage = this.GetDmg(s, 0),
+          status = Status.drawNextTurn,
+          statusAmount = 2,
+          targetPlayer = true
         });
-        AAttack aattack1 = new AAttack();
-        aattack1.damage = this.GetDmg(s, 0);
-        aattack1.fast = true;
-        aattack1.piercing = true;
-        aattack1.stunEnemy = true;
-        aattack1.omitFromTooltips = true;
-        cardActionList1.Add((CardAction) aattack1);
-        actions = cardActionList2;
-        break;
       case Upgrade.B:
         List<CardAction> cardActionList3 = new List<CardAction>();
         cardActionList3.Add((CardAction) new AAttack()
         {
-          damage = this.GetDmg(s, 1),
-          piercing = true
-          stunEnemy = true
+          status = Status.drawNextTurn,
+          statusAmount = 1,
+          targetPlayer = true
+        });
+        cardActionList3.Add((CardAction) new AAttack()
+        {
+          status = Status.energyNextTurn,
+          statusAmount = 1,
+          targetPlayer = true
         });
         actions = cardActionList3;
         break;
