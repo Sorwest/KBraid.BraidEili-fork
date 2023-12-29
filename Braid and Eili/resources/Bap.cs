@@ -12,7 +12,7 @@ public class Bap : Card
     return new CardData()
     {
       cost = 0,
-      art = new Spr?(Spr.cards_Cannon),
+      art = new Spr?(Spr.cards_colorless),
     };
   }
 
@@ -27,7 +27,6 @@ public class Bap : Card
         cardActionList1.Add((CardAction) new AAttack()
         {
           damage = this.GetDmg(s, 1),
-          fast = true
         });
         actions = cardActionList1;
         break;
@@ -35,8 +34,8 @@ public class Bap : Card
         List<CardAction> cardActionList2 = new List<CardAction>();
         cardActionList2.Add((CardAction) new AAttack()
         {
-          damage = this.GetDmg(s, 2),
-          fast = true
+          damage = this.GetDmg(s, 1),
+          damage = this.GetDmg(s, 1),
         });
         actions = cardActionList2;
         break;
@@ -45,8 +44,13 @@ public class Bap : Card
         cardActionList3.Add((CardAction) new AAttack()
         {
           damage = this.GetDmg(s, 1),
-          fast = true,
-          piercing = true
+          stunEnemy = true
+        });
+        cardActionList3.Add((CardAction) new AStatus()
+        {
+          status = Status.stunCharge,
+          statusAmount = 1,
+          targetPlayer = true
         });
         actions = cardActionList3;
         break;
