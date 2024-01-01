@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 
 #nullable enable
-[CardMeta(deck = Deck.eili, rarity = Rarity.common, upgradesTo = new Upgrade[] {Upgrade.A, Upgrade.B})]
-public class PlanAhead : Card
+[CardMeta(deck = Deck.braid, rarity = Rarity.common, upgradesTo = new Upgrade[] {Upgrade.A, Upgrade.B})]
+public class BigHit : Card
 {
-  public override string Name() => "Plan Ahead";
+  public override string Name() => "Big Hit";
 
   public override CardData GetData(State state)
   {
@@ -15,7 +15,7 @@ public class PlanAhead : Card
     switch (upgrade)
     {
       case Upgrade.None:
-        num = 0;
+        num = 1;
         break;
       case Upgrade.A:
         num = 1;
@@ -29,9 +29,8 @@ public class PlanAhead : Card
         break;
     }
     data.cost = num;
-    data.art = new Spr?(Spr.cards_ShuffleShot);
-    return data;
-  }
+      art = new Spr?(Spr.cards_colorless),
+    };
 
   public override List<CardAction> GetActions(State s, Combat c)
   {
@@ -41,11 +40,9 @@ public class PlanAhead : Card
     {
       case Upgrade.None:
         List<CardAction> cardActionList1 = new List<CardAction>();
-        cardActionList1.Add((CardAction) new AStatus()
+        cardActionList1.Add((CardAction) new AAttack()
         {
-          status = Status.drawNextTurn,
-          statusAmount = 1,
-          targetPlayer = true
+          damage = this.GetDmg(s, 2),
         });
         actions = cardActionList1;
         break;
@@ -53,23 +50,16 @@ public class PlanAhead : Card
         List<CardAction> cardActionList2 = new List<CardAction>();
         cardActionList2.Add((CardAction) new AAttack()
         {
-          status = Status.drawNextTurn,
-          statusAmount = 2,
-          targetPlayer = true
+          damage = this.GetDmg(s, 3),
         });
+        actions = cardActionList2;
+        break;
       case Upgrade.B:
         List<CardAction> cardActionList3 = new List<CardAction>();
         cardActionList3.Add((CardAction) new AAttack()
         {
-          status = Status.drawNextTurn,
-          statusAmount = 1,
-          targetPlayer = true
-        });
-        cardActionList3.Add((CardAction) new AAttack()
-        {
-          status = Status.energyNextTurn,
-          statusAmount = 1,
-          targetPlayer = true
+          damage = this.GetDmg(s, 6),
+          stunEnemy = true
         });
         actions = cardActionList3;
         break;

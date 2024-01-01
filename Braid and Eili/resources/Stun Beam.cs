@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable enable
 [CardMeta(deck = Deck.eili, rarity = Rarity.common, upgradesTo = new Upgrade[] {Upgrade.A, Upgrade.B})]
-public class StunShot : Card
+public class StunBeam : Card
 {
   public override string Name() => "Stun Beam";
 
