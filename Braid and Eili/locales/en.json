@@ -15,20 +15,12 @@
   "KB_BraidEili_CharStart_0:1": "...", //Braid neutral
   "KB_BraidEili_CharStart_0:2": "...", //Eili happy
   
-  "KB_BraidEili_Cobalt_0:0": "",
-  
-  "KB_BraidEili_AboutToDieAndLoop_0:0": "",
-
-  "KB_Eili_Cobalt_0:0": "",
-
-  "KB_Braid_Cobalt_0:0": "",
-  
   "KB_Eili_CharStart_0:0": "Alright team! Time to take another...", //cat neutral
   "KB_Eili_CharStart_0:1": "Wait who-?", //cat grumpy
   "KB_Eili_CharStart_0:2": "Hello!",  //Eili neutral
   "KB_Eili_CharStart_0:3": "...", //cat worried
   "KB_Eili_CharStart_0:4": "Hello?", //cat squint
-  "KB_Eili_CharStart_0:5": "Hi!", //Eili happy
+  "KB_Eili_CharStart_0:5": "Hi!", //Eili neutral
   "KB_Eili_CharStart_0:6": "...", //cat squint
   "KB_Eili_CharStart_0:7": "Welcome abord!", //cat neutral
   "KB_Eili_CharStart_0:8": "Thank you!", //Eili happy
@@ -51,9 +43,55 @@
   "KB_VoidZoneEiliBraid_0:4": "...", //braid hug0
   "KB_VoidZoneEiliBraid_0:5": "...", //braid hug1
   
-  "RunWinKBWho_Eili_1:0": "",
+  "KB_BraidEili_Cobalt_0:0": "",
   
-  "RunWinKBWho_Braid_1:0": "",
+  "KB_BraidEili_AboutToDieAndLoop_0:0": "",
+
+  "KB_Eili_Cobalt_0:0": "",
+
+  "KB_Braid_Cobalt_0:0": "",
+  
+  "RunWinKBWho_Eili_1:0": "You should not exist.", //void
+  "RunWinKBWho_Eili_1:1": "I know.", //eili concerned
+  "RunWinKBWho_Eili_1:2": "Your awareness over the situation is greater than you are letting on.", //void
+  "RunWinKBWho_Eili_1:3": "Maybe.", //eili concerned
+  "RunWinKBWho_Eili_1:4": "Is it to express individuality or to encurage introspective?", //void
+  "RunWinKBWho_Eili_1:5": "A little of both.", //eili neutral
+  
+  "RunWinKBWho_Braid_1:0": "You treat your existance like it has no purpose.", //void
+  "RunWinKBWho_Braid_1:1": "Surviving only in the moment. Any thoughts to the future being in consideration of tactical advantages.", //void
+  "RunWinKBWho_Braid_1:2": "I am a soldier.", //braid neutral
+  "RunWinKBWho_Braid_1:3": "You are a living being, but treat yourself less than an animal.", //void
+  "RunWinKBWho_Braid_1:4": "...", //braid serious
+  "RunWinKBWho_Braid_1:5": "You're trading your potential for convenience.", //void
+  "RunWinKBWho_Braid_1:6": "This trade is disadvantagious...", //void
+  "RunWinKBWho_Braid_1:7": "But worse, unjustified.", //void
+  "RunWinKBWho_Braid_1:8": "...", //braid serious
+
+  "RunWinKBWho_Braid_2:0": "", //remember who you really are
+
+  "RunWinKBWho_Braid_3:0": "", //do it for her
+
+  "t1084days": "T-1084 days.",
+  "KB_Braid_Memory_1:0": "Rise and shine KB26.", //sensor error
+  "KB_Braid_Memory_1:1": "...", //braid blink
+  "KB_Braid_Memory_1:2": "Ah, What a fine specimen.", //sensor error
+  "KB_Braid_Memory_1:3": "Defenitely the exemplery of your batch!", //sensor error
+  "KB_Braid_Memory_1:4": "What are your orders.", //braid neutral
+  "KB_Braid_Memory_1:5": "Right of course. A demonstration of your capabilites are in order... Bring in the target.", //sensor error
+  "KB_Braid_Memory_1:6": "Where am i? why are you keeping me here!? Let go of me!", //sensor error
+  "KB_Braid_Memory_1:7": "KB26... Kill.", //sensor error
+  "KB_Braid_Memory_1:8": "...", //braid seriousC
+
+  "t412days": "T-412 days.", //running away
+
+  "t39days": "T-39 days.", //finding the cobalt
+
+  "KB_Finale_Braid_1:0": "Wait there was only one signature! did we lose one?",
+  "KB_Finale_Braid_1:1": "Braid? Eili? You there?",
+  "KB_Finale_Braid_1:2": "...",
+  "KB_Finale_Braid_1:3": "Yeah, we're here.",
+  "KB_Finale_LastMidcombatCutscene_3:ffffffff": "Everyone together! Punch through!!",
 
   "KB_Eili_Card_IdentifyWeakpoint:0a": "There, hit 'em there!",
   "KB_Eili_Card_IdentifyWeakpoint:0b": "A-ha! That spot!",
@@ -72,7 +110,7 @@
   "KB_Eili_Card_AnchorShot:0b": "Locked down!",
   "KB_Eili_Card_PickMeUp:0a": "Ahh... Refreshing!",
   "KB_Eili_Card_PickMeUp:0b": "Time for a stretch!",
-  "KB_Eili_Card_PickMeUp:0c": "A quck little break... and back to it!",
+  "KB_Eili_Card_PickMeUp:0c": "A quick little break... and back to it!",
   "KB_Eili_Card_Inspiration:0a": "This will work... This will work!",
   "KB_Eili_Card_Inspiration:0b": "Oh yeah, it's all coming together!",
   "KB_Eili_Card_Inspiration:0c": "Now things get fun!",
@@ -144,7 +182,7 @@
   
   "KB_Eili_ThatsALotOfDamageToThem_0:0a": "KILL!! MURDER!!!",
   "KB_Eili_ThatsALotOfDamageToThem_0:0b": "Whoa! Calm down Eili!",
-  "KB__ThatsALotOfDamageToUs_0:0": "We'd best not take more hits like that.",
+  "KB__ThatsALotOfDamageToUs_0:0": "",
   
   "KB__TheyGotCorroded_0:0": "",
   
