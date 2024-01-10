@@ -54,36 +54,53 @@
 
   "KB_Braid_Cobalt_0:0": "",
   
+  // picking Eili flips a flag that changes Braid's memory dialogue, revealing Eili's text
   "RunWinKBWho_Eili_1:0": "You should not exist.", //void
   "RunWinKBWho_Eili_1:1": "I know.", //eili concerned
   "RunWinKBWho_Eili_1:2": "Your awareness over the situation is greater than you are letting on.", //void
   "RunWinKBWho_Eili_1:3": "Maybe.", //eili concerned
-  "RunWinKBWho_Eili_1:4": "Is it to express individuality or to encurage introspective?", //void
+  "RunWinKBWho_Eili_1:4": "Is it to express individuality or to encourage introspective?", //void
   "RunWinKBWho_Eili_1:5": "A little of both.", //eili neutral
   
-  "RunWinKBWho_Braid_1:0": "You treat your existance like it has no purpose.", //void
+  "RunWinKBWho_Braid_1:0": "You treat your existence like it has no purpose.", //void
   "RunWinKBWho_Braid_1:1": "Surviving only in the moment. Any thoughts to the future being in consideration of tactical advantages.", //void
   "RunWinKBWho_Braid_1:2": "I am a soldier.", //braid neutral
   "RunWinKBWho_Braid_1:3": "You are a living being, but treat yourself less than an animal.", //void
   "RunWinKBWho_Braid_1:4": "...", //braid serious
   "RunWinKBWho_Braid_1:5": "You're trading your potential for convenience.", //void
-  "RunWinKBWho_Braid_1:6": "This trade is disadvantagious...", //void
+  "RunWinKBWho_Braid_1:6": "This trade is disadvantageous...", //void
   "RunWinKBWho_Braid_1:7": "But worse, unjustified.", //void
   "RunWinKBWho_Braid_1:8": "...", //braid serious
 
-  "RunWinKBWho_Braid_2:0": "", //remember who you really are
+  "RunWinKBWho_Braid_2:0": "You were already on the path to becoming something greater than how you started.", //void
+  "RunWinKBWho_Braid_2:1": "Perhaps ending up in the time knot was what you needed to proceed all the way.", //void
+  "RunWinKBWho_Braid_2:2": "I don't understand.", //braid serious
+  "RunWinKBWho_Braid_2:3": "This defensive posturing is unnecessary.", //void
+  "RunWinKBWho_Braid_2:4": "...", //braid serious
+  "RunWinKBWho_Braid_2:5": "...", //braid neutral
+  "RunWinKBWho_Braid_2:6": "I don't understand.", //braid neutral
+  "RunWinKBWho_Braid_2:7": "You have already begun to show willingness to protect more than yourself.", //void
 
-  "RunWinKBWho_Braid_3:0": "", //do it for her
+  "RunWinKBWho_Braid_3:0": "I am ready to understand more.", //braid neutral
+  "RunWinKBWho_Braid_3:1": "You have not been alone starting your journey, and you are even less alone now.", //void
+  "RunWinKBWho_Braid_3:2": "...", //braid neutral
+  "RunWinKBWho_Braid_3:3": "I have something worth protecting.", //braid neutral
+  "RunWinKBWho_Braid_3:4": "Something worth fighting for.", //braid serious
+  "RunWinKBWho_Braid_3:5": "More than that. Widen your potential.", //void
+  "RunWinKBWho_Braid_3:6": "Something worth...", //braid neutral
+  "RunWinKBWho_Braid_3:7": "Something worth...", //braid serious
+  "RunWinKBWho_Braid_3:8": "...", //braid eyes closed
+  "RunWinKBWho_Braid_3:9": "...Caring for.", //braid neutral
 
   "t1084days": "T-1084 days.",
-  "KB_Braid_Memory_1:0": "Rise and shine KB26.", //sensor error
+  "KB_Braid_Memory_1:0": "Rise and shine KB-26.", //sensor error
   "KB_Braid_Memory_1:1": "...", //braid blink
   "KB_Braid_Memory_1:2": "Ah, What a fine specimen.", //sensor error
-  "KB_Braid_Memory_1:3": "Defenitely the exemplery of your batch!", //sensor error
+  "KB_Braid_Memory_1:3": "Definitely the exemplary of your batch!", //sensor error
   "KB_Braid_Memory_1:4": "What are your orders.", //braid neutral
-  "KB_Braid_Memory_1:5": "Right of course. A demonstration of your capabilites are in order... Bring in the target.", //sensor error
-  "KB_Braid_Memory_1:6": "Where am i? why are you keeping me here!? Let go of me!", //sensor error
-  "KB_Braid_Memory_1:7": "KB26... Kill.", //sensor error
+  "KB_Braid_Memory_1:5": "Right of course. A demonstration of your capabilities are in order... Bring in the target.", //sensor error
+  "KB_Braid_Memory_1:6": "Where am i? Why are you keeping me here!? Let go of me!", //sensor error
+  "KB_Braid_Memory_1:7": "KB-26... Kill.", //sensor error
   "KB_Braid_Memory_1:8": "...", //braid seriousC
 
   "t412days": "T-412 days.", //running away
@@ -97,12 +114,12 @@
   "KB_Braid_Memory_3:3": "We have a lead over them. That's all.", //braid serious
   "KB_Braid_Memory_3:4a": ".... ................................ ........................................", //sensor error
   "KB_Braid_Memory_3:4b": "Hey! what about that ship over there? I bet we could hide in there no problem!", //Eili neutral
-  "KB_Braid_Memory_3:5": "Not a chance. That ship is heavilly armed and would tear us to pieces.", //braid serious
+  "KB_Braid_Memory_3:5": "Not a chance. That ship is heavily armed and would tear us to pieces.", //braid serious
   "KB_Braid_Memory_3:6a": ".............................................", //sensor error
   "KB_Braid_Memory_3:6b": "That's what makes it the perfect hiding spot!", //Eili happy
   "KB_Braid_Memory_3:7a": ".............................................................................. .....................", //sensor error
-  "KB_Braid_Memory_3:7b": "Anyone coming into this sector would take one look at that thing at turn tail, they's never find us!", //Eili happy
-  "KB_Braid_Memory_3:8": "...", //braid defeat
+  "KB_Braid_Memory_3:7b": "Anyone coming into this sector would take one look at that thing at turn tail, they'd never find us!", //Eili happy
+  "KB_Braid_Memory_3:8": "...", //braid eyes closed
   "KB_Braid_Memory_3:9": "...", //braid serious
   "KB_Braid_Memory_3:10": "Alright.", //braid serious
   "t6minutes": "T-6 minutes.",
@@ -124,7 +141,7 @@
   "KB_Braid_Memory_3:23": "!!!", //braid SeriousB
   "KB_Braid_Memory_3:24": "Wait! That wasn't me!", //peri panic
   "KB_Braid_Memory_3:25": "Oh no, they didn't...", //peri squint
-  "KB_Braid_Memory_3:26": "Those IDIOTS!!", //peri mad
+  "KB_Braid_Memory_3:26": "Those idiots!", //peri mad
   "KB_Braid_Memory_3:27": "Stay right here or follow me. I don't care which!", //peri mad
   "KB_Braid_Memory_3:28": "Roger that.", //braid SeriousA
 
