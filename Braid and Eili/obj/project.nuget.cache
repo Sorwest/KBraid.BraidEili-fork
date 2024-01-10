@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "mOvBba4rdF9d5dt0CoIFB4yzzPMI7FiPUQRUxsO9N+QYlvC2MwK+lM3U/qT9RBwdYYR1Kd67MawK2YCHOsInPg==",
+  "dgSpecHash": "IURh9WNa9QCVzIJxjqCJwNMwEJALsUiHqwoPv0k9IryzN+KOYhZ09zJVw0lvmHLBMtwM51mHwWRjq7g76MjmfQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kurot\\Downloads\\KBraid.BraidEili\\BraidEili.csproj",
+  "projectFilePath": "D:\\users\\Braiden-PC\\Documents\\GitHub\\modding projects\\cobalt core\\Braid and Eili\\BraidEili.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\kurot\\.nuget\\packages\\enumbynamesourcegenerator\\1.1.1\\enumbynamesourcegenerator.1.1.1.nupkg.sha512",
-    "C:\\Users\\kurot\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
-    "C:\\Users\\kurot\\.nuget\\packages\\nanoray.extractsinglefileapplicationresourcetask\\1.0.0\\nanoray.extractsinglefileapplicationresourcetask.1.0.0.nupkg.sha512",
-    "C:\\Users\\kurot\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\kurot\\.nuget\\packages\\nickel.modbuildconfig\\0.1.2\\nickel.modbuildconfig.0.1.2.nupkg.sha512"
+    "C:\\Users\\Braiden\\.nuget\\packages\\enumbynamesourcegenerator\\1.1.1\\enumbynamesourcegenerator.1.1.1.nupkg.sha512",
+    "C:\\Users\\Braiden\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\Braiden\\.nuget\\packages\\nanoray.extractsinglefileapplicationresourcetask\\1.0.0\\nanoray.extractsinglefileapplicationresourcetask.1.0.0.nupkg.sha512",
+    "C:\\Users\\Braiden\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Braiden\\.nuget\\packages\\nickel.modbuildconfig\\0.1.2\\nickel.modbuildconfig.0.1.2.nupkg.sha512"
   ],
   "logs": []
 }

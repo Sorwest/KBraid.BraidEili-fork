@@ -159,19 +159,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kurot\\.nuget\\packages\\": {}
+    "C:\\Users\\Braiden\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "0.1.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kurot\\Downloads\\KBraid.BraidEili\\BraidEili.csproj",
+      "projectUniqueName": "D:\\users\\Braiden-PC\\Documents\\GitHub\\modding projects\\cobalt core\\Braid and Eili\\BraidEili.csproj",
       "projectName": "BraidEili",
-      "projectPath": "C:\\Users\\kurot\\Downloads\\KBraid.BraidEili\\BraidEili.csproj",
-      "packagesPath": "C:\\Users\\kurot\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kurot\\Downloads\\KBraid.BraidEili\\obj\\",
+      "projectPath": "D:\\users\\Braiden-PC\\Documents\\GitHub\\modding projects\\cobalt core\\Braid and Eili\\BraidEili.csproj",
+      "packagesPath": "C:\\Users\\Braiden\\.nuget\\packages\\",
+      "outputPath": "D:\\users\\Braiden-PC\\Documents\\GitHub\\modding projects\\cobalt core\\Braid and Eili\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kurot\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Braiden\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -236,7 +236,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

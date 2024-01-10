@@ -30,7 +30,7 @@ namespace KBraid.Helper
             "TargettingScramble",
             "ReroutePower",
             "DumpCargo",
-            // 21-32: Isabelle
+            // 21-32: Braid
             "BigHit",
             "ShoveIt",
             "Driveby",
@@ -78,7 +78,7 @@ namespace KBraid.Helper
             "Targetting Scramble",
             "Reroute Power",
             "Dump Cargo!",
-            // 21-32: Isabelle
+            // 21-32: Braid
             "Big Hit",
             "Shove It",
             "Driveby",

@@ -1,7 +1,11 @@
 {
     "character": {
+        "name": "Eili",
+        "description": "<c=42add1>Eili</c>\nA bubbly little fellow who loves to help others with her excentric solutions."
+    },
+    "character": {
         "name": "Braid",
-        "description": "<c=00FFFF>Braid</c>\nBlue creature."
+        "description": "<c=d9eeff>Braid</c>\nA soldier who knows when victory nessisitates <c=downside>sacrifice</c>."
     },
     "status": {
         "Bleeding": {
