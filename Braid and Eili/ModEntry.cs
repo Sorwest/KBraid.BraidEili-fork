@@ -134,7 +134,7 @@ public sealed class ModEntry : SimpleMod
         {
             Deck = BraidDeck.Deck,
             Description = this.AnyLocalizations.Bind(["character", "description"]).Localize,
-            BorderSprite = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/sprites/panel/char_braid.png")).Sprite,
+            BorderSprite = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/sprites/panels/char_braid.png")).Sprite,
             StarterCardTypes = StarterCardTypes,
             NeutralAnimation = new()
             {

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BraidEili")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0+b295dcd9004182bc9c14219e1852eb6ebc1c4c12")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0+7386ac40c635024238ec633d5c6a0759d3bc9024")]
 [assembly: System.Reflection.AssemblyProductAttribute("BraidEili")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BraidEili")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.1.0.0")]
