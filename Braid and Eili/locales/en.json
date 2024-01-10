@@ -88,7 +88,45 @@
 
   "t412days": "T-412 days.", //running away
 
-  "t39days": "T-39 days.", //finding the cobalt
+  "t244minutes": "T-244 minutes.",
+  "KB_Braid_Memory_3:0a": ".....................", //sensor error
+  "KB_Braid_Memory_3:0b": "I think we lost them.", //Eili concerned
+  "KB_Braid_Memory_3:1": "We haven't.", //braid serious
+  "KB_Braid_Memory_3:2a": ".............................................. .....................................", //sensor error
+  "KB_Braid_Memory_3:2b": "It's been a few days since the last encounter, before they'd already be on us again.", //Eili neutral
+  "KB_Braid_Memory_3:3": "We have a lead on them. That's all.", //braid serious
+  "KB_Braid_Memory_3:4a": ".... ................................ ........................................", //sensor error
+  "KB_Braid_Memory_3:4b": "Hey! what about that ship over there? I bet we could hide in there no problem!", //Eili neutral
+  "KB_Braid_Memory_3:5": "Not a chance. That ship is heavilly armed and would tear us to pieces.", //braid serious
+  "KB_Braid_Memory_3:6a": ".............................................", //sensor error
+  "KB_Braid_Memory_3:6b": "That's what makes it the perfect hiding spot!", //Eili happy
+  "KB_Braid_Memory_3:7a": ".............................................................................. .....................", //sensor error
+  "KB_Braid_Memory_3:7b": "Anyone coming into this sector would take one look at that thing at turn tail, they's never find us!", //Eili happy
+  "KB_Braid_Memory_3:8": "...", //braid defeat
+  "KB_Braid_Memory_3:9": "...", //braid serious
+  "KB_Braid_Memory_3:10": "Alright.", //braid serious
+  "t6minutes": "T-6 minutes.",
+  "KB_Braid_Memory_3:11": "Aagh! Frick!", //peri panic
+  "KB_Braid_Memory_3:12": "We just need a place to hide.", //braid seriousA
+  "KB_Braid_Memory_3:13": "Just a- After that unprovoked beatdown and not even a hello?", //peri squint
+  "KB_Braid_Memory_3:14": "Urrgh... you could at least give me your name first if you plan on sticking around. There's clearly no getting you off the ship now.", //peri mad
+  "KB_Braid_Memory_3:15": "KB-26.", //braid serious
+  "KB_Braid_Memory_3:16": "I said a name not a registration number.", //peri squint
+  "KB_Braid_Memory_3:17": "Of all the threats to finally encounter on this job. A one man raid by such a jacked little guy wasn't one of them...", //peri neutral
+  "KB_Braid_Memory_3:18a": "......", //sensor error
+  "KB_Braid_Memory_3:18b": "Braid!", //Eili happy
+  "KB_Braid_Memory_3:19": "Huh?", //peri neutral
+  "KB_Braid_Memory_3:20": "B-...Braid?", //braid neutral
+  "KB_Braid_Memory_3:21": "That's my name. Braid.", //braid neutral
+  "KB_Braid_Memory_3:22": "That's a dumb name.", //peri neutral
+  "KB_Braid_Memory_3:23": "...", //braid unamused
+  "KB_Braid_Memory_3:22": "What the!?", //peri panic
+  "KB_Braid_Memory_3:23": "!!!", //braid SeriousB
+  "KB_Braid_Memory_3:24": "Wait! That wasn't me!", //peri panic
+  "KB_Braid_Memory_3:25": "Oh no, they didn't...", //peri squint
+  "KB_Braid_Memory_3:26": "Those IDIOTS!!", //peri mad
+  "KB_Braid_Memory_3:27": "Stay right here or follow me. I don't care which!", //peri mad
+  "KB_Braid_Memory_3:28": "Roger that.", //braid SeriousA
 
   "KB_Finale_Braid_1:0": "Wait there was only one signature! did we lose one?",
   "KB_Finale_Braid_1:1": "Braid? Eili? You there?",
