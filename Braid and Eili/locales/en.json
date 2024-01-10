@@ -46,13 +46,13 @@
   "KB_VoidZoneEiliBraid_0:4": "...", //braid hug0
   "KB_VoidZoneEiliBraid_0:5": "...", //braid hug1
   
-  "KB_BraidEili_Cobalt_0:0": "",
-  
   "KB_BraidEili_AboutToDieAndLoop_0:0": "",
 
   "KB_Eili_Cobalt_0:0": "",
 
   "KB_Braid_Cobalt_0:0": "",
+  
+  "KB_BraidEili_Cobalt_0:0": "",
   
   // picking Eili flips a flag that changes Braid's memory dialogue, revealing Eili's text
   "RunWinKBWho_Eili_1:0": "You should not exist.", //void
@@ -149,6 +149,7 @@
   "KB_Finale_Braid_1:1": "Braid? Eili? You there?",
   "KB_Finale_Braid_1:2": "...",
   "KB_Finale_Braid_1:3": "Yeah, we're here.",
+  "KB_Finale_PirateBoss_1:ffffffff": "We're glad for you Riggs.",
   "KB_Finale_LastMidcombatCutscene_3:ffffffff": "Everyone together! Punch through!!",
 
   "KB_Eili_Card_IdentifyWeakpoint:0a": "There, hit 'em there!",
@@ -270,7 +271,7 @@
   "KB__Miner:0": "",
   "KB__Miner_Infinite:0": "",
   "KB_Braid_MinerOncePerFightShouts:0": "Such agression. I'll meet it in kind.",
-  "KB_Braid_MinerOncePerFightShouts:1": "Good. That would make things interesting.",
+  "KB_Braid_MinerOncePerFightShouts:1": "Good it will make things interesting.",
   
   "KB__PlayedManyCards_Multi_0:0": "",
   
