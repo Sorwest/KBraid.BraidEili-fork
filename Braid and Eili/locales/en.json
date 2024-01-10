@@ -10,6 +10,9 @@
   "CrystallizedFriendEvent_KB.BraidEili.EiliDeck:1": "Hello again!", //Eili happy
   "CrystallizedFriendEvent_KB.BraidEili.BraidDeck:0": "...", //Braid blink
   "CrystallizedFriendEvent_KB.BraidEili.BraidDeck:1": "What are your orders.", //Braid neutral
+
+  "KB_GrandmaShop_Eili:0": "Brownies!",
+  "KB_GrandmaShop_Braid:0": "Ammo.",
   
   "KB_BraidEili_CharStart_0:0": "...", //Eili neutral
   "KB_BraidEili_CharStart_0:1": "...", //Braid neutral
