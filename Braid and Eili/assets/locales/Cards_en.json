@@ -1,63 +1,65 @@
 {
-    "character": {
-        "name": "Eili",
-        "description": "<c=42add1>Eili</c>\nA bubbly little fellow who loves to help others with her excentric solutions."
+  "character": {
+    "Braid": {
+      "name": "Braid",
+      "description": "<c=c0c9e6>Braid</c>\nA soldier who knows when victory necessitates <c=downside>sacrifice</c>."
     },
-    "character": {
-        "name": "Braid",
-        "description": "<c=c0c9e6>Braid</c>\nA soldier who knows when victory necessitates <c=downside>sacrifice</c>."
-    },
-    "status": {
-        "Bleeding": {
-            "name": "Bleeding",
-            "description": "At the end of turn, <c=downside>take 1 damage</c> and decrease this by 1."
-        },
-        "BloodMirror": {
-            "name": "Blood Mirror",
-            "description": "Whenever you take hull damage, your enemy also takes as much. <c=downside>Decreases by 1 at the start of each turn.</c>"
-        },
-        "Transfusion": {
-            "name": "Transfusion",
-            "description": "At the start of turn, gain 1 <c=status>TRANSFUSING</c>. <c=downside>Decrease by 1 for each hull damage taken.</c>"
-        },
-        "Transfusing": {
-            "name": "Transfusing",
-            "description": [
-                "When <c=status>TRANSFUSING</c> reaches the amount of <c=status>TRANSFUSION</c> on this ship, <c=heal>heal for that amount</c> and remove both.",
-                "If you still have <c=status>TRANSFUSING</c> at the end of combat, <c=heal>heal for its amount</c>."
-            ]
-        }
-    },
-    "card": {
-        "BigHit": {
-            "name": "Big Hit"
-        },
-        "Driveby": {
-            "name": "Drive-By"
-        },
-        "Haymaker": {
-            "name": "Haymaker"
-        },
-        "LeftHook": {
-            "name": "Left Hook"
-        },
-        "LimiterOff": {
-            "name": "Limiter Off"
-        },
-        "Pummel": {
-            "name": "Pummel"
-        },
-        "ShoveIt": {
-            "name": "ShoveIt"
-        },
-        "Bap": {
-            "name": "Bap"
-        },
-        "PlanAhead": {
-            "name": "Plan Ahead"
-        },
-        "StunBeam": {
-            "name": "Stun Beam"
-        },
+    "Eili": {
+      "name": "Eili",
+      "description": "<c=42add1>Eili</c>\nA bubbly little fellow who loves to help others with her excentric solutions."
     }
+  },
+  "status": {
+    "Bleeding": {
+      "name": "Bleeding",
+      "description": "At the end of turn, <c=downside>take 1 damage</c> and decrease this by 1."
+    },
+    "BloodMirror": {
+      "name": "Blood Mirror",
+      "description": "Whenever you take hull damage, your enemy also takes as much. <c=downside>Decreases by 1 at the start of each turn.</c>"
+    },
+    "Transfusion": {
+      "name": "Transfusion",
+      "description": "At the start of turn, gain 1 <c=status>TRANSFUSING</c>. <c=downside>Decrease by 1 for each hull damage taken.</c>"
+    },
+    "Transfusing": {
+      "name": "Transfusing",
+      "description": [
+        "When <c=status>TRANSFUSING</c> reaches the amount of <c=status>TRANSFUSION</c> on this ship, <c=heal>heal for that amount</c> and remove both.",
+        "If you still have <c=status>TRANSFUSING</c> at the end of combat, <c=heal>heal for its amount</c>."
+      ]
+    }
+  },
+  "card": {
+    "BigHit": {
+      "name": "Big Hit"
+    },
+    "Driveby": {
+      "name": "Drive-By"
+    },
+    "Haymaker": {
+      "name": "Haymaker"
+    },
+    "LeftHook": {
+      "name": "Left Hook"
+    },
+    "LimiterOff": {
+      "name": "Limiter Off"
+    },
+    "Pummel": {
+      "name": "Pummel"
+    },
+    "ShoveIt": {
+      "name": "ShoveIt"
+    },
+    "Bap": {
+      "name": "Bap"
+    },
+    "PlanAhead": {
+      "name": "Plan Ahead"
+    },
+    "StunBeam": {
+      "name": "Stun Beam"
+    }
+  }
 }
