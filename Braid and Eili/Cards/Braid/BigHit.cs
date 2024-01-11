@@ -69,7 +69,7 @@ public class BigHit : Card, IModdedCard
                 List<CardAction> cardActionList3 = new List<CardAction>();
                 cardActionList3.Add((CardAction)new AAttack()
                 {
-                    damage = this.GetDmg(s, 6),
+                    damage = this.GetDmg(s, 5),
                 });
                 actions = cardActionList3;
                 break;

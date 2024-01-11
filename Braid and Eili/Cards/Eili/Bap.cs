@@ -63,12 +63,6 @@ public class Bap : Card, IModdedCard
                     damage = this.GetDmg(s, 1),
                     stunEnemy = true
                 });
-                cardActionList3.Add((CardAction)new AStatus()
-                {
-                    status = Status.stunCharge,
-                    statusAmount = 1,
-                    targetPlayer = true
-                });
                 actions = cardActionList3;
                 break;
         }

@@ -61,22 +61,23 @@ public class PlanAhead : Card, IModdedCard
                 break;
             case Upgrade.A:
                 List<CardAction> cardActionList2 = new List<CardAction>();
-                cardActionList2.Add((CardAction)new AAttack()
+                cardActionList2.Add((CardAction)new AStatus()
                 {
                     status = Status.drawNextTurn,
                     statusAmount = 2,
                     targetPlayer = true
                 });
+                actions = cardActionList2;
                 break;
             case Upgrade.B:
                 List<CardAction> cardActionList3 = new List<CardAction>();
-                cardActionList3.Add((CardAction)new AAttack()
+                cardActionList3.Add((CardAction)new AStatus()
                 {
                     status = Status.drawNextTurn,
                     statusAmount = 1,
                     targetPlayer = true
                 });
-                cardActionList3.Add((CardAction)new AAttack()
+                cardActionList3.Add((CardAction)new AStatus()
                 {
                     status = Status.energyNextTurn,
                     statusAmount = 1,
