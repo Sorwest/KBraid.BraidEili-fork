@@ -39,7 +39,7 @@ public class BigHit : Card, IModdedCard
                 break;
         }
         data.cost = num;
-        data.art = new Spr?(Spr.cards_colorless);
+        data.art = new Spr?(Spr.cards_Cannon);
         return data;
     }
 

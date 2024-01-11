@@ -35,7 +35,7 @@ public class StunBeam : Card, IModdedCard
                 num = 2;
                 break;
             case Upgrade.B:
-                num = 3;
+                num = 1;
                 break;
         }
         data.cost = num;

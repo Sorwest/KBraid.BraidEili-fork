@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Reflection;
 
 namespace KBraid.BraidEili.Cards;
-public class LimiterOff : Card, IModdedCard
+public class Hotwire : Card, IModdedCard
 {
     public static void Register(IModHelper helper)
     {
-        helper.Content.Cards.RegisterCard("LimiterOff", new()
+        helper.Content.Cards.RegisterCard("Hotwire", new()
         {
             CardType = MethodBase.GetCurrentMethod()!.DeclaringType!,
             Meta = new()
@@ -16,18 +16,18 @@ public class LimiterOff : Card, IModdedCard
                 rarity = Rarity.common,
                 upgradesTo = [Upgrade.A, Upgrade.B]
             },
-            Name = ModEntry.Instance.AnyLocalizations.Bind(["card", "LimiterOff", "name"]).Localize
+            Name = ModEntry.Instance.AnyLocalizations.Bind(["card", "Hotwire", "name"]).Localize
         });
     }
-    public override string Name() => "Limiter Off";
+    public override string Name() => "Hotwire";
 
     public override CardData GetData(State state)
     {
-        CardData data = new CardData();
-        data.cost = 1;
-        data.art = new Spr?(Spr.cards_FumeCannon);
-    data.artTint = "ff0000";
-        return data;
+        return new CardData()
+        {
+            cost = 0,
+            art = new Spr?(Spr.cards_Heat),
+        };
     }
 
     public override List<CardAction> GetActions(State s, Combat c)
@@ -38,41 +38,49 @@ public class LimiterOff : Card, IModdedCard
         {
             case Upgrade.None:
                 List<CardAction> cardActionList1 = new List<CardAction>();
-                cardActionList1.Add((CardAction)new AAttack()
+                cardActionList1.Add((CardAction)new AStatus()
                 {
-                    damage = this.GetDmg(s, 5),
+                    status = Status.shield,
+                    statusAmount = 1,
+                    targetPlayer = true
                 });
-                cardActionList1.Add((CardAction)new AHurt()
+                cardActionList1.Add((CardAction)new AStatus()
                 {
-                    targetPlayer = true,
-                    hurtAmount = 1
+                    status = Status.heat,
+                    statusAmount = 1,
+                    targetPlayer = true
                 });
                 actions = cardActionList1;
                 break;
             case Upgrade.A:
                 List<CardAction> cardActionList2 = new List<CardAction>();
-                cardActionList2.Add((CardAction)new AAttack()
+                cardActionList2.Add((CardAction)new AStatus()
                 {
-                    damage = this.GetDmg(s, 6),
+                    status = Status.shield,
+                    statusAmount = 2,
+                    targetPlayer = true
                 });
-                cardActionList2.Add((CardAction)new AHurt()
+                cardActionList2.Add((CardAction)new AStatus()
                 {
-                    targetPlayer = true,
-                    hurtAmount = 1
+                    status = Status.heat,
+                    statusAmount = 1,
+                    targetPlayer = true
                 });
                 actions = cardActionList2;
                 break;
             case Upgrade.B:
                 List<CardAction> cardActionList3 = new List<CardAction>();
-                cardActionList3.Add((CardAction)new AAttack()
+                cardActionList3.Add((CardAction)new AStatus()
                 {
-                    damage = this.GetDmg(s, 5),
-                    piercing = true
+                    status = Status.tempShield,
+                    statusAmount = 3,
+                    targetPlayer = true
                 });
-                cardActionList3.Add((CardAction)new AHurt()
+                cardActionList3.Add((CardAction)new AStatus()
                 {
-                    targetPlayer = true,
-                    hurtAmount = 1
+                    status = Status.heat,
+                    statusAmount = 1,
+                    targetPlayer = true
                 });
                 actions = cardActionList3;
                 break;

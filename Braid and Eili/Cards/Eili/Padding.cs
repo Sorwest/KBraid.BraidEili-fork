@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Reflection;
 
 namespace KBraid.BraidEili.Cards;
-public class LimiterOff : Card, IModdedCard
+public class Padding : Card, IModdedCard
 {
     public static void Register(IModHelper helper)
     {
-        helper.Content.Cards.RegisterCard("LimiterOff", new()
+        helper.Content.Cards.RegisterCard("Padding", new()
         {
             CardType = MethodBase.GetCurrentMethod()!.DeclaringType!,
             Meta = new()
@@ -16,17 +16,30 @@ public class LimiterOff : Card, IModdedCard
                 rarity = Rarity.common,
                 upgradesTo = [Upgrade.A, Upgrade.B]
             },
-            Name = ModEntry.Instance.AnyLocalizations.Bind(["card", "LimiterOff", "name"]).Localize
+            Name = ModEntry.Instance.AnyLocalizations.Bind(["card", "Padding", "name"]).Localize
         });
     }
-    public override string Name() => "Limiter Off";
+    public override string Name() => "Padding";
 
     public override CardData GetData(State state)
     {
         CardData data = new CardData();
-        data.cost = 1;
-        data.art = new Spr?(Spr.cards_FumeCannon);
-    data.artTint = "ff0000";
+        Upgrade upgrade = this.upgrade;
+        int num = 0;
+        switch (upgrade)
+        {
+            case Upgrade.None:
+                num = 0;
+                break;
+            case Upgrade.A:
+                num = 0;
+                break;
+            case Upgrade.B:
+                num = 1;
+                break;
+        }
+        data.cost = num;
+        data.art = new Spr?(Spr.cards_ShiftShot);
         return data;
     }
 
@@ -38,41 +51,31 @@ public class LimiterOff : Card, IModdedCard
         {
             case Upgrade.None:
                 List<CardAction> cardActionList1 = new List<CardAction>();
-                cardActionList1.Add((CardAction)new AAttack()
+                cardActionList1.Add((CardAction)new AStatus()
                 {
-                    damage = this.GetDmg(s, 5),
-                });
-                cardActionList1.Add((CardAction)new AHurt()
-                {
-                    targetPlayer = true,
-                    hurtAmount = 1
+                    status = Status.tempShield,
+                    statusAmount = 1,
+                    targetPlayer = true
                 });
                 actions = cardActionList1;
                 break;
             case Upgrade.A:
                 List<CardAction> cardActionList2 = new List<CardAction>();
-                cardActionList2.Add((CardAction)new AAttack()
+                cardActionList2.Add((CardAction)new AStatus()
                 {
-                    damage = this.GetDmg(s, 6),
-                });
-                cardActionList2.Add((CardAction)new AHurt()
-                {
-                    targetPlayer = true,
-                    hurtAmount = 1
+                    status = Status.tempShield,
+                    statusAmount = 2,
+                    targetPlayer = true
                 });
                 actions = cardActionList2;
                 break;
             case Upgrade.B:
                 List<CardAction> cardActionList3 = new List<CardAction>();
-                cardActionList3.Add((CardAction)new AAttack()
+                cardActionList3.Add((CardAction)new AStatus()
                 {
-                    damage = this.GetDmg(s, 5),
-                    piercing = true
-                });
-                cardActionList3.Add((CardAction)new AHurt()
-                {
-                    targetPlayer = true,
-                    hurtAmount = 1
+                    status = Status.tempShield,
+                    statusAmount = 3,
+                    targetPlayer = true
                 });
                 actions = cardActionList3;
                 break;

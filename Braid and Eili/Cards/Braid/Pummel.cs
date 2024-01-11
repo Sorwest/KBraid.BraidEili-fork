@@ -25,7 +25,7 @@ public class Pummel : Card, IModdedCard
     {
         CardData data = new CardData();
         data.cost = 2;
-        data.art = new Spr?(Spr.cards_Scattershot);
+        data.art = new Spr?(Spr.cards_EndlessMagazine);
         Upgrade upgrade = this.upgrade;
         bool flag = false;
         switch (upgrade)
