@@ -25,7 +25,7 @@ public class BraidPummel : Card, IModdedCard
     {
         CardData data = new CardData();
         data.cost = 2;
-        data.art = new Spr?(StableSpr.cards_Scattershot);
+        data.art = new Spr?(StableSpr.cards_EndlessMagazine);
         Upgrade upgrade = this.upgrade;
         bool flag = false;
         switch (upgrade)

@@ -25,7 +25,7 @@ public class BraidLeftHook : Card, IModdedCard
     {
         CardData data = new CardData();
         data.cost = 1;
-        data.art = new Spr?(StableSpr.cards_Scattershot);
+        data.art = new Spr?(StableSpr.cards_ScootRight);
         return data;
     }
 

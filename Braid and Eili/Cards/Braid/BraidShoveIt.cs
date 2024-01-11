@@ -25,7 +25,7 @@ public class BraidShoveIt : Card, IModdedCard
     {
         CardData data = new CardData();
         data.cost = 1;
-        data.art = new Spr?(StableSpr.cards_Scattershot);
+        data.art = new Spr?(StableSpr.cards_Strafe);
         Upgrade upgrade = this.upgrade;
         bool flag = false;
         switch (upgrade)

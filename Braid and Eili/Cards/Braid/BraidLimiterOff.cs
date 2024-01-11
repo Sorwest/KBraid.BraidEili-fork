@@ -25,7 +25,8 @@ public class BraidLimiterOff : Card, IModdedCard
     {
         CardData data = new CardData();
         data.cost = 1;
-        data.art = new Spr?(StableSpr.cards_Scattershot);
+        data.art = new Spr?(StableSpr.cards_FumeCannon);
+        data.artTint = "ff0000";
         return data;
     }
 

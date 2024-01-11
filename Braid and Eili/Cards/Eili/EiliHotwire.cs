@@ -20,73 +20,68 @@ public class EiliHotwire : Card, IModdedCard
         });
     }
     public override string Name() => "Hotwire";
-
+    
     public override CardData GetData(State state)
     {
-        CardData data = new CardData();
-        data.cost = 0;
-        data.art = ModEntry.Instance.BasicBackground.Sprite;
-        return data;
+        return new CardData()
+        {
+            cost = 0,
+            art = new Spr?(StableSpr.cards_Heat),
+        };
     }
 
     public override List<CardAction> GetActions(State s, Combat c)
     {
         Upgrade upgrade = this.upgrade;
-        List<CardAction> actions = new();
+        List<CardAction> actions = new List<CardAction>();
         switch (upgrade)
         {
             case Upgrade.None:
-                List<CardAction> cardActionList1 = new List<CardAction>()
+                List<CardAction> cardActionList1 = new List<CardAction>();
+                cardActionList1.Add((CardAction)new AStatus()
                 {
-                    new AStatus()
-                    {
-                        status = Status.shield,
-                        statusAmount = 1,
-                        targetPlayer = true
-                    },
-                    new AStatus()
-                    {
-                        status = Status.heat,
-                        statusAmount = 1,
-                        targetPlayer = true
-                    }
-                };
+                    status = Status.shield,
+                    statusAmount = 1,
+                    targetPlayer = true
+                });
+                cardActionList1.Add((CardAction)new AStatus()
+                {
+                    status = Status.heat,
+                    statusAmount = 1,
+                    targetPlayer = true
+                });
                 actions = cardActionList1;
                 break;
             case Upgrade.A:
-                List<CardAction> cardActionList2 = new List<CardAction>()
+                List<CardAction> cardActionList2 = new List<CardAction>();
+                cardActionList2.Add((CardAction)new AStatus()
                 {
-                    new AStatus()
-                    {
-                        status = Status.shield,
-                        statusAmount = 2,
-                        targetPlayer = true
-                    },
-                    new AStatus()
-                    {
-                        status = Status.heat,
-                        statusAmount = 1,
-                        targetPlayer = true
-                    }
-                };
+                    status = Status.shield,
+                    statusAmount = 2,
+                    targetPlayer = true
+                });
+                cardActionList2.Add((CardAction)new AStatus()
+                {
+                    status = Status.heat,
+                    statusAmount = 1,
+                    targetPlayer = true
+                });
                 actions = cardActionList2;
                 break;
             case Upgrade.B:
-                List<CardAction> cardActionList3 = new List<CardAction>()
+                List<CardAction> cardActionList3 = new List<CardAction>();
+                cardActionList3.Add((CardAction)new AStatus()
                 {
-                    new AStatus()
-                    {
-                        status = Status.tempShield,
-                        statusAmount = 3,
-                        targetPlayer = true
-                    },
-                    new AStatus()
-                    {
-                        status = Status.heat,
-                        statusAmount = 1,
-                        targetPlayer = true
-                    }
-                };
+                    status = Status.tempShield,
+                    statusAmount = 3,
+                    targetPlayer = true
+                });
+                cardActionList3.Add((CardAction)new AStatus()
+                {
+                    status = Status.heat,
+                    statusAmount = 1,
+                    targetPlayer = true
+                });
                 actions = cardActionList3;
                 break;
         }

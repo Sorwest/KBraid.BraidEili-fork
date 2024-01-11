@@ -39,7 +39,7 @@ public class BraidHaymaker : Card, IModdedCard
                 break;
         }
         data.cost = num;
-        data.art = new Spr?(StableSpr.cards_colorless);
+        data.art = new Spr?(StableSpr.cards_Zoom);
         return data;
     }
 

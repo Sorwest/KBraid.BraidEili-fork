@@ -23,52 +23,60 @@ public class EiliPadding : Card, IModdedCard
 
     public override CardData GetData(State state)
     {
-        return new CardData()
+        CardData data = new CardData();
+        Upgrade upgrade = this.upgrade;
+        int num = 0;
+        switch (upgrade)
         {
-            cost = upgrade == Upgrade.B ? 1 : 0,
-            art = ModEntry.Instance.BasicBackground.Sprite,
-        };
+            case Upgrade.None:
+                num = 0;
+                break;
+            case Upgrade.A:
+                num = 0;
+                break;
+            case Upgrade.B:
+                num = 1;
+                break;
+        }
+        data.cost = num;
+        data.art = new Spr?(StableSpr.cards_ShiftShot);
+        return data;
     }
 
     public override List<CardAction> GetActions(State s, Combat c)
     {
-        List<CardAction> actions = new();
+        Upgrade upgrade = this.upgrade;
+        List<CardAction> actions = new List<CardAction>();
         switch (upgrade)
         {
             case Upgrade.None:
-                List<CardAction> cardActionList1 = new List<CardAction>()
+                List<CardAction> cardActionList1 = new List<CardAction>();
+                cardActionList1.Add((CardAction)new AStatus()
                 {
-                    new AStatus()
-                    {
-                        status = Status.tempShield,
-                        statusAmount = 1,
-                        targetPlayer = true,
-                    }
-                };
+                    status = Status.tempShield,
+                    statusAmount = 1,
+                    targetPlayer = true
+                });
                 actions = cardActionList1;
                 break;
             case Upgrade.A:
-                List<CardAction> cardActionList2 = new List<CardAction>()
+                List<CardAction> cardActionList2 = new List<CardAction>();
+                cardActionList2.Add((CardAction)new AStatus()
                 {
-                    new AStatus()
-                    {
-                        status = Status.tempShield,
-                        statusAmount = 2,
-                        targetPlayer = true,
-                    }
-                };
+                    status = Status.tempShield,
+                    statusAmount = 2,
+                    targetPlayer = true
+                });
                 actions = cardActionList2;
                 break;
             case Upgrade.B:
-                List<CardAction> cardActionList3 = new List<CardAction>()
+                List<CardAction> cardActionList3 = new List<CardAction>();
+                cardActionList3.Add((CardAction)new AStatus()
                 {
-                    new AStatus()
-                    {
-                        status = Status.tempShield,
-                        statusAmount = 3,
-                        targetPlayer = true,
-                    }
-                };
+                    status = Status.tempShield,
+                    statusAmount = 3,
+                    targetPlayer = true
+                });
                 actions = cardActionList3;
                 break;
         }

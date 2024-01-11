@@ -25,11 +25,11 @@ public class EiliPlanAhead : Card, IModdedCard
     {
         CardData data = new CardData();
         Upgrade upgrade = this.upgrade;
-        int num = 0;
+        int num = 1;
         switch (upgrade)
         {
             case Upgrade.None:
-                num = 0;
+                num = 1;
                 break;
             case Upgrade.A:
                 num = 1;
@@ -54,7 +54,7 @@ public class EiliPlanAhead : Card, IModdedCard
                 cardActionList1.Add((CardAction)new AStatus()
                 {
                     status = Status.drawNextTurn,
-                    statusAmount = 1,
+                    statusAmount = 2,
                     targetPlayer = true
                 });
                 actions = cardActionList1;
@@ -64,7 +64,7 @@ public class EiliPlanAhead : Card, IModdedCard
                 cardActionList2.Add((CardAction)new AStatus()
                 {
                     status = Status.drawNextTurn,
-                    statusAmount = 2,
+                    statusAmount = 3,
                     targetPlayer = true
                 });
                 actions = cardActionList2;
@@ -74,7 +74,7 @@ public class EiliPlanAhead : Card, IModdedCard
                 cardActionList3.Add((CardAction)new AStatus()
                 {
                     status = Status.drawNextTurn,
-                    statusAmount = 1,
+                    statusAmount = 2,
                     targetPlayer = true
                 });
                 cardActionList3.Add((CardAction)new AStatus()
