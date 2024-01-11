@@ -1,9 +1,0 @@
-D:\users\Braiden-PC\Documents\GitHub\modding projects\cobalt core\Braid and Eili\bin\Release\net8.0\BraidEili.deps.json
-D:\users\Braiden-PC\Documents\GitHub\modding projects\cobalt core\Braid and Eili\bin\Release\net8.0\BraidEili.dll
-D:\users\Braiden-PC\Documents\GitHub\modding projects\cobalt core\Braid and Eili\obj\Release\net8.0\BraidEili.csproj.AssemblyReference.cache
-D:\users\Braiden-PC\Documents\GitHub\modding projects\cobalt core\Braid and Eili\obj\Release\net8.0\BraidEili.GeneratedMSBuildEditorConfig.editorconfig
-D:\users\Braiden-PC\Documents\GitHub\modding projects\cobalt core\Braid and Eili\obj\Release\net8.0\BraidEili.AssemblyInfoInputs.cache
-D:\users\Braiden-PC\Documents\GitHub\modding projects\cobalt core\Braid and Eili\obj\Release\net8.0\BraidEili.AssemblyInfo.cs
-D:\users\Braiden-PC\Documents\GitHub\modding projects\cobalt core\Braid and Eili\obj\Release\net8.0\BraidEili.csproj.CoreCompileInputs.cache
-D:\users\Braiden-PC\Documents\GitHub\modding projects\cobalt core\Braid and Eili\obj\Release\net8.0\BraidEili.sourcelink.json
-D:\users\Braiden-PC\Documents\GitHub\modding projects\cobalt core\Braid and Eili\obj\Release\net8.0\BraidEili.dll

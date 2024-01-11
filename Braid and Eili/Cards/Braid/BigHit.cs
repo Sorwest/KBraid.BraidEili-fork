@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 
 namespace KBraid.BraidEili.Cards;
-public class BigHit : Card, IBraidCard
+public class BigHit : Card, IModdedCard
 {
     public static void Register(IModHelper helper)
     {

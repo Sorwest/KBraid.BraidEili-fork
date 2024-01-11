@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace KBraid.BraidEili;
 
-internal interface IBraidCard
+internal interface IModdedCard
 {
     static abstract void Register(IModHelper helper);
 

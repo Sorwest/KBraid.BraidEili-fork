@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 
 namespace KBraid.BraidEili.Cards;
-public class Driveby : Card , IBraidCard
+public class Driveby : Card , IModdedCard
 {
     public static void Register(IModHelper helper)
     {

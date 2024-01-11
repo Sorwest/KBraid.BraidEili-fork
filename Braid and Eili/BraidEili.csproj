@@ -16,13 +16,7 @@
 		<IncludedModProjectPaths>assets</IncludedModProjectPaths>
 	</PropertyGroup>
 	<ItemGroup>
-	  <PackageReference Include="Nickel.ModBuildConfig" Version="0.1.2" />
-	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Condition="$(IsNickelMod)" Include="Nickel.ModBuildConfig" Version="0.1.2" />
-		<PackageReference Condition="!$(IsNickelMod)" Include="Shockah.CobaltCoreModBuildConfig" Version="2.0.0" />
-		<PackageReference Condition="!$(IsNickelMod)" Include="Shrike" Version="3.0.0" />
-		<PackageReference Condition="!$(IsNickelMod)" Include="Shrike.Harmony" Version="3.0.0" />
+		<PackageReference Condition="$(IsNickelMod)" Include="Nickel.ModBuildConfig" Version="0.2.0" />
 		<PackageReference Include="EnumByNameSourceGenerator" Version="1.1.1" PrivateAssets="All" ExcludeAssets="runtime" />
 	</ItemGroup>
 </Project>
