@@ -16,9 +16,6 @@
 		<IncludedModProjectPaths>assets</IncludedModProjectPaths>
 	</PropertyGroup>
 	<ItemGroup>
-	  <Compile Remove="C:\Users\kurot\.nuget\packages\maketypespublic\1.0.3\contentFiles\cs\any\System.Runtime.CompilerServices\IgnoresAccessChecksToAttribute.cs" />
-	</ItemGroup>
-	<ItemGroup>
 		<PackageReference Condition="$(IsNickelMod)" Include="Nickel.ModBuildConfig" Version="0.2.0" />
 		<PackageReference Include="EnumByNameSourceGenerator" Version="1.1.1" PrivateAssets="All" ExcludeAssets="runtime" />
 	</ItemGroup>
