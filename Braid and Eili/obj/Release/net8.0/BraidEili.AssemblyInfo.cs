@@ -11,11 +11,10 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Runtime.CompilerServices.IgnoresAccessChecksToAttribute("CobaltCore")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("BraidEili")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0+1c560616cfd4c625cc3ff2c525d207b84ba22c11")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0+fb0543e3820378ae1dd6d5446d233fb1d38490f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("BraidEili")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BraidEili")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.1.0.0")]
