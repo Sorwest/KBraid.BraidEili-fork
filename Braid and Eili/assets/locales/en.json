@@ -46,13 +46,11 @@
   "KB_VoidZoneEiliBraid_0:4": "...", //braid hugA
   "KB_VoidZoneEiliBraid_0:5": "...", //braid hugB
   
-  "KB_BraidEili_Cobalt_0:0": "",
-  
-  "KB_BraidEili_AboutToDieAndLoop_0:0": "",
-
   "KB_Eili_Cobalt_0:0": "",
 
   "KB_Braid_Cobalt_0:0": "",
+  
+  "KB_BraidEili_Cobalt_0:0": "",
   
   // picking Eili flips a flag that changes Braid's memory dialogue, revealing Eili's text
   "RunWinKBWho_Eili_1:0": "You should not exist.", //void
@@ -215,6 +213,8 @@
   "KB_Eili_OneHitPointThisIsFine:0b": "I'm... I'm scared...",
   "KB_Eili_OneHitPointThisIsFine:0c": "N-no! No more! Please!",
   "KB_Braid_OneHitPointThisIsFine:0": "Not yet...",
+
+  "KB_BraidEili_AboutToDieAndLoop_0:0": "",
   
   "KB__PlayedManyCards:0": "",
   
@@ -271,7 +271,7 @@
   "KB__Miner:0": "",
   "KB__Miner_Infinite:0": "",
   "KB_Braid_MinerOncePerFightShouts:0": "Such agression. I'll meet it in kind.",
-  "KB_Braid_MinerOncePerFightShouts:1": "Good. That would make things interesting.",
+  "KB_Braid_MinerOncePerFightShouts:1": "Good it will make things interesting.",
   
   "KB__PlayedManyCards_Multi_0:0": "",
   
