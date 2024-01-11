@@ -12,7 +12,7 @@ public class PlanAhead : Card, IModdedCard
             CardType = MethodBase.GetCurrentMethod()!.DeclaringType!,
             Meta = new()
             {
-                deck = ModEntry.Instance.BraidDeck.Deck,
+                deck = ModEntry.Instance.EiliDeck.Deck,
                 rarity = Rarity.common,
                 upgradesTo = [Upgrade.A, Upgrade.B]
             },
@@ -39,7 +39,7 @@ public class PlanAhead : Card, IModdedCard
                 break;
         }
         data.cost = num;
-        data.art = new Spr?(Spr.cards_ShuffleShot);
+        data.art = new Spr?(StableSpr.cards_ShuffleShot);
         return data;
     }
 

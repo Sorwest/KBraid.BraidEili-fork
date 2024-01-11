@@ -25,7 +25,7 @@ public class LimiterOff : Card, IModdedCard
     {
         CardData data = new CardData();
         data.cost = 1;
-        data.art = new Spr?(Spr.cards_Scattershot);
+        data.art = new Spr?(StableSpr.cards_Scattershot);
         return data;
     }
 

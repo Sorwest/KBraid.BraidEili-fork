@@ -25,7 +25,7 @@ public class Driveby : Card , IModdedCard
     {
         CardData data = new CardData();
         data.cost = 2;
-        data.art = new Spr?(Spr.cards_Scattershot);
+        data.art = new Spr?(StableSpr.cards_Scattershot);
         Upgrade upgrade = this.upgrade;
         bool flag = false;
         switch (upgrade)

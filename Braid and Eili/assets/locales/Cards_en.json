@@ -10,24 +10,21 @@
     }
   },
   "status": {
-    "Bleeding": {
-      "name": "Bleeding",
-      "description": "At the end of turn, <c=downside>take 1 damage</c> and decrease this by 1."
+    "DisabledDampeners": {
+      "name": "Disabled Dampeners",
+      "description": "Whenever you are hit, gain as much <c=status>EVADE</c> and <c=status>MOVE RANDOM</c>. <c=downside>Decreases by 1 at the start of each turn</c>."
     },
-    "BloodMirror": {
-      "name": "Blood Mirror",
-      "description": "Whenever you take hull damage, your enemy also takes as much. <c=downside>Decreases by 1 at the start of each turn.</c>"
+    "ShockAbsorber": {
+      "name": "Shock Absorber",
+      "description": "Whenever you are hit, gain as much <c=status>TEMP SHIELD NEXT TURN</c>."
     },
-    "Transfusion": {
-      "name": "Transfusion",
-      "description": "At the start of turn, gain 1 <c=status>TRANSFUSING</c>. <c=downside>Decrease by 1 for each hull damage taken.</c>"
+    "TempShieldNextTurn": {
+      "name": "Temp Shield Next Turn",
+      "description": "At the start of next turn, gain <c=status>TEMP SHIELD</c>."
     },
-    "Transfusing": {
-      "name": "Transfusing",
-      "description": [
-        "When <c=status>TRANSFUSING</c> reaches the amount of <c=status>TRANSFUSION</c> on this ship, <c=heal>heal for that amount</c> and remove both.",
-        "If you still have <c=status>TRANSFUSING</c> at the end of combat, <c=heal>heal for its amount</c>."
-      ]
+    "KineticGenerator": {
+      "name": "Kinetic Generator",
+      "description": "Gain <c=status>TEMP SHIELD</c> for all distance moved. </c=downside>Decreases by 1 each turn</c>."
     }
   },
   "card": {
@@ -60,6 +57,51 @@
     },
     "StunBeam": {
       "name": "Stun Beam"
+    },
+    "Padding": {
+      "name": "Padding"
+    },
+    "DisableDampeners": {
+      "name": "Disable Dampeners"
+    },
+    "ShockAbsorption": {
+      "name": "Shock Absorption"
+    },
+    "DumpPower": {
+      "name": "Dump Power"
+    },
+    "Hotwire": {
+      "name": "Hotwire"
+    },
+    "IdentifyWeakspot": {
+      "name": "Identify Weakspot",
+      "description": "A random enemy ship part gains Brittle until damaged."
+    },
+    "ExtraPlating": {
+      "name": "Extra Plating",
+      "description": {
+        "None": "A random ship part gains Armor until end of combat.",
+        "A": "A random ship part gains Armor until end of combat.",
+        "B": "All ship parts gain Armor until next turn."
+      }
+    },
+    "SpeedIsSafety": {
+      "name": "Speed Is Safety"
+    },
+    "HullCrack": {
+      "name": "Hull Crack"
+    },
+    "AnchorShot": {
+      "name": "Anchor Shot"
+    },
+    "Foresight": {
+      "name": "Foresight"
+    },
+    "HackFlightControls": {
+      "name": "Hack Flight Controls"
+    },
+    "Improvising": {
+      "name": "Improvising"
     }
   }
 }

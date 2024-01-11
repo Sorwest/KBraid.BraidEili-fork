@@ -12,7 +12,7 @@ public class StunBeam : Card, IModdedCard
             CardType = MethodBase.GetCurrentMethod()!.DeclaringType!,
             Meta = new()
             {
-                deck = ModEntry.Instance.BraidDeck.Deck,
+                deck = ModEntry.Instance.EiliDeck.Deck,
                 rarity = Rarity.common,
                 upgradesTo = [Upgrade.A, Upgrade.B]
             },
@@ -54,7 +54,7 @@ public class StunBeam : Card, IModdedCard
                 break;
         }
         data.exhaust = flag;
-        data.art = new Spr?(Spr.cards_StunCharge);
+        data.art = new Spr?(StableSpr.cards_StunCharge);
         return data;
     }
 

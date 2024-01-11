@@ -1,6 +1,7 @@
 using Nickel;
 using System.Collections.Generic;
 using System.Reflection;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace KBraid.BraidEili.Cards;
 public class Bap : Card, IModdedCard
@@ -12,7 +13,7 @@ public class Bap : Card, IModdedCard
             CardType = MethodBase.GetCurrentMethod()!.DeclaringType!,
             Meta = new()
             {
-                deck = ModEntry.Instance.BraidDeck.Deck,
+                deck = ModEntry.Instance.EiliDeck.Deck,
                 rarity = Rarity.common,
                 upgradesTo = [Upgrade.A, Upgrade.B]
             },
@@ -26,8 +27,8 @@ public class Bap : Card, IModdedCard
         return new CardData()
         {
             cost = 0,
-            art = new Spr?(Spr.cards_colorless),
-        };
+            art = ModEntry.Instance.BasicBackground.Sprite,
+    };
     }
 
     public override List<CardAction> GetActions(State s, Combat c)
