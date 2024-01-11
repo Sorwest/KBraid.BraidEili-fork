@@ -16,15 +16,26 @@
     },
     "ShockAbsorber": {
       "name": "Shock Absorber",
-      "description": "Whenever you are hit, gain as much <c=status>TEMP SHIELD NEXT TURN</c>."
+      "description": "Whenever you are hit, gain <c=status>TEMP SHIELD NEXT TURN</c> equal to the damage received.",
+      "combatDescription": "Whenever you are hit, gain <c=status>TEMP SHIELD NEXT TURN</c> equal to <c=keyword>x{[Amount]}</c> the damage received."
     },
     "TempShieldNextTurn": {
       "name": "Temp Shield Next Turn",
-      "description": "At the start of next turn, gain <c=status>TEMP SHIELD</c>."
+      "description": "At the start of next turn, gain <c=status>TEMP SHIELD</c>.",
+      "combatDescription": "At the start of next turn, gain <c=keyword>{[Amount]}</c> <c=status>TEMP SHIELD</c>."
     },
     "KineticGenerator": {
       "name": "Kinetic Generator",
-      "description": "Gain <c=status>TEMP SHIELD</c> for all distance moved. </c=downside>Decreases by 1 each turn</c>."
+      "description": "Gain <c=status>TEMP SHIELD</c> for any and all distance moved. <c=downside>Decreases by 1 each turn</c>."
+    },
+    "EqualPayback": {
+      "name": "Equal Payback",
+      "description": "Whenever this ship is hit, it immediately fires a shot of equal damage. <c=downsideDecreases by 1 at the start of each turn</c>."
+    },
+    "TempPowerdrive": {
+      "name": "Temp Powerdrive",
+      "description": "Add damage to all attacks. <c=downside>Goes away at end of turn</c>.",
+      "combatDescription": "Add <c=keyword>{{Amount}}</c> damage to all attacks. <c=downside>Goes away at end of turn</c>."
     },
     "Bide": {
       "name": "Bide",
@@ -200,9 +211,12 @@
     "Revenge": {
       "name": "Revenge",
       "description": {
-        "None": "Pierce attack. Dmg = Hull lost this combat.",
-        "A": "Pierce attack. Dmg = Hull lost this combat.",
-        "B": "Pierce attack. Dmg = Hull lost this combat. Apply <c=redd>Brittle</c>."
+        "None": "Pierce attack. Dmg = Hull lost this combat.{{Amount}}",
+        "A": "Pierce attack. Dmg = Hull lost this combat.{{Amount}}",
+        "B": [
+          "Pierce attack. Dmg = Hull lost this combat. {{Amount}}",
+          "Apply <c=redd>Brittle</c>."
+        ]
       }
     },
     "MissileBarrage": {
