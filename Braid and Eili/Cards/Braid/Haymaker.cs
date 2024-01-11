@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 
 namespace KBraid.BraidEili.Cards;
-public class Haymaker : Card, IBraidCard
+public class Haymaker : Card, IModdedCard
 {
     public static void Register(IModHelper helper)
     {

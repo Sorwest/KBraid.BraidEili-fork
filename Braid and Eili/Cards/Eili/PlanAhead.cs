@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 
 namespace KBraid.BraidEili.Cards;
-public class PlanAhead : Card, IBraidCard
+public class PlanAhead : Card, IModdedCard
 {
     public static void Register(IModHelper helper)
     {

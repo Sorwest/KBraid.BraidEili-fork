@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\users\\Braiden-PC\\Documents\\GitHub\\modding projects\\cobalt core\\Braid and Eili\\BraidEili.csproj": {}
+    "C:\\Users\\kurot\\Downloads\\KBraid.BraidEili\\Braid and Eili\\BraidEili.csproj": {}
   },
   "projects": {
-    "D:\\users\\Braiden-PC\\Documents\\GitHub\\modding projects\\cobalt core\\Braid and Eili\\BraidEili.csproj": {
+    "C:\\Users\\kurot\\Downloads\\KBraid.BraidEili\\Braid and Eili\\BraidEili.csproj": {
       "version": "0.1.0",
       "restore": {
-        "projectUniqueName": "D:\\users\\Braiden-PC\\Documents\\GitHub\\modding projects\\cobalt core\\Braid and Eili\\BraidEili.csproj",
+        "projectUniqueName": "C:\\Users\\kurot\\Downloads\\KBraid.BraidEili\\Braid and Eili\\BraidEili.csproj",
         "projectName": "BraidEili",
-        "projectPath": "D:\\users\\Braiden-PC\\Documents\\GitHub\\modding projects\\cobalt core\\Braid and Eili\\BraidEili.csproj",
-        "packagesPath": "C:\\Users\\Braiden\\.nuget\\packages\\",
-        "outputPath": "D:\\users\\Braiden-PC\\Documents\\GitHub\\modding projects\\cobalt core\\Braid and Eili\\obj\\",
+        "projectPath": "C:\\Users\\kurot\\Downloads\\KBraid.BraidEili\\Braid and Eili\\BraidEili.csproj",
+        "packagesPath": "C:\\Users\\kurot\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kurot\\Downloads\\KBraid.BraidEili\\Braid and Eili\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Braiden\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kurot\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,6 +41,12 @@
               "target": "Package",
               "version": "[1.1.1, )"
             },
+            "MakeTypesPublic": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
             "MonoGame.Framework.DesktopGL": {
               "include": "Compile",
               "suppressParent": "All",
@@ -60,7 +66,7 @@
             },
             "Nickel.ModBuildConfig": {
               "target": "Package",
-              "version": "[0.1.2, )"
+              "version": "[0.2.0, )"
             }
           },
           "imports": [
@@ -79,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
