@@ -43,8 +43,8 @@
   "KB_VoidZoneEiliBraid_0:1": "...", //Braid neutral
   "KB_VoidZoneEiliBraid_0:2": "...", //Eili cheekyA
   "KB_VoidZoneEiliBraid_0:3": "...", //braid unamused
-  "KB_VoidZoneEiliBraid_0:4": "...", //braid hug0
-  "KB_VoidZoneEiliBraid_0:5": "...", //braid hug1
+  "KB_VoidZoneEiliBraid_0:4": "...", //braid hugA
+  "KB_VoidZoneEiliBraid_0:5": "...", //braid hugB
   
   "KB_BraidEili_Cobalt_0:0": "",
   
@@ -145,11 +145,12 @@
   "KB_Braid_Memory_3:27": "Stay right here or follow me. I don't care which!", //peri mad
   "KB_Braid_Memory_3:28": "Roger that.", //braid SeriousA
 
-  "KB_Finale_Braid_1:0": "Wait there was only one signature! did we lose one?",
-  "KB_Finale_Braid_1:1": "Braid? Eili? You there?",
-  "KB_Finale_Braid_1:2": "...",
-  "KB_Finale_Braid_1:3": "Yeah, we're here.",
-  "KB_Finale_LastMidcombatCutscene_3:ffffffff": "Everyone together! Punch through!!",
+  "KB_Finale_Braid_1:0": "Wait there was only one signature! did we lose one?", //cat worried
+  "KB_Finale_Braid_1:1": "Braid? Eili? You there?", //cat sad
+  "KB_Finale_Braid_1:2": "...", //braid ending a
+  "KB_Finale_Braid_1:3": "Yeah, we're here.", //braid ending b
+  "Finale_PirateBoss_1:ffffffff": "We're happy for you Riggs.", //braid ending b
+  "KB_Finale_LastMidcombatCutscene_3:ffffffff": "Everyone together! Punch through!!", //braid ending c
 
   "KB_Eili_Card_IdentifyWeakpoint:0a": "There, hit 'em there!",
   "KB_Eili_Card_IdentifyWeakpoint:0b": "A-ha! That spot!",
