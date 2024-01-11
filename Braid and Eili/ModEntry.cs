@@ -18,7 +18,7 @@ public sealed class ModEntry : SimpleMod
     internal ILocaleBoundNonNullLocalizationProvider<IReadOnlyList<string>> Localizations { get; }
 
     internal IDeckEntry BraidDeck { get; }
-    internal Color BraidColor => new Color(192, 201, 230);
+    internal Color BraidColor => new Color(0.753, 0.788, 0.902);
     internal Color BraidCardTitleColor = new Color(0, 0, 0);
 
     internal ISpriteEntry EiliCardBorder { get; }
