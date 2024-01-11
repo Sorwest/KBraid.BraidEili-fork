@@ -5,11 +5,34 @@ using Nanoray.PluginManager;
 using Nickel;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using static HarmonyLib.Code;
 
 namespace KBraid.BraidEili;
+
+/* TO-DO
+ * DisabledDampeners Status -keep track of X damage taken, gain X Evade, move X random. Decrease 1 on turn start
+ * ShockAbsorber Status -keep track of X damage taken, gain X TempShieldNextTurn
+ * TempShieldNextTurn Status
+ * KineticGenerator Status -keep track of movement amounts, give temp shield accordingly
+ * AApplyTempBrittle Action -if IsRandom, choose random enemy part and give it new TempBrittle. if !IsRandom, part in front of active cannon gets it, remove TempBrittle on hit
+ * -new TempBrittle dmg modifier
+ * AApplyTempArmor Action -keep track of current part dmg modifiers, apply new TempArmor dmg modifier until start of turn
+ * -new TempArmor dmg modifier
+ * Make Inspiration Action -select card, remove exhaust from card
+ * ALaunchMidrow Action -find a way to add enemy intent mid-turn, active specific intents
+ * EqualPayback Status -keep track of all damage taken, fire the value, remove at start of turn
+ * TempPowerdrive Status -powerdrive, lose all stacks on turn end
+ * Bide Status -keep track of all damage taken, add value to next attack, remove bide
+ * ASacrifice Action -select card, exhaust card, keep int of card cost, return it
+ * Make Revenge Action -find a way to keep track of lost hull during combat
+ * Make Resolve Action -X = Solid Ship parts
+ *                      Survive X
+ *                      (Weak applied to damaged tile, Brittle if already Weak. Max Hull decreased by damage taken. Ship is destroyed if Max Hull reaches 0)
+ * Make Retreat Action -find a way to access PlayerWon(g) and flag it noRewards = true
+ * Eili Artifacts
+ * Braid Artifacts
+ * Story
+ */
 public sealed class ModEntry : SimpleMod
 {
     internal static ModEntry Instance { get; private set; } = null!;
@@ -20,10 +43,10 @@ public sealed class ModEntry : SimpleMod
     internal ILocaleBoundNonNullLocalizationProvider<IReadOnlyList<string>> Localizations { get; }
     internal IDeckEntry BraidDeck { get; }
     internal IDeckEntry EiliDeck { get; }
-    internal static Color BraidColor => new(0.753, 0.788, 0.902);
+    internal static Color BraidColor => new("c0c9e6");
     internal static Color EiliColor => new("42add1");
     internal static Color BraidCardTitleColor => new("000000");
-    internal static Color EiliCardTitleColor => new("ffa500");
+    internal static Color EiliCardTitleColor => new("292c40");
     internal ISpriteEntry BasicBackground { get; }
     internal ISpriteEntry AApplyTempBrittle_Icon { get; }
     internal ISpriteEntry AApplyTempArmor_Icon { get; }
@@ -31,6 +54,9 @@ public sealed class ModEntry : SimpleMod
     internal IStatusEntry ShockAbsorber { get; }
     internal IStatusEntry TempShieldNextTurn { get; }
     internal IStatusEntry KineticGenerator { get; }
+    internal IStatusEntry EqualPayback { get; }
+    internal IStatusEntry TempPowerdrive { get; }
+    internal IStatusEntry Bide { get; }
     internal IList<string> faceSprites { get; } = [
         "blink",
         "crystallized",
@@ -68,52 +94,69 @@ public sealed class ModEntry : SimpleMod
     ];
 
     internal static IReadOnlyList<Type> EiliStarterCardTypes { get; } = [
-        typeof(Padding),
-        typeof(PlanAhead),
+        typeof(EiliPadding),
+        typeof(EiliPlanAhead),
     ];
 
     internal static IReadOnlyList<Type> EiliCommonCardTypes { get; } = [
-        typeof(IdentifyWeakspot),
-        typeof(ShockAbsorption),
-        typeof(DisableDampeners),
-        typeof(StunBeam),
-        typeof(Bap),
-        typeof(DumpPower),
-        typeof(Hotwire)
+        typeof(EiliIdentifyWeakspot),
+        typeof(EiliShockAbsorption),
+        typeof(EiliDisableDampeners),
+        typeof(EiliStunBeam),
+        typeof(EiliBap),
+        typeof(EiliDumpPower),
+        typeof(EiliHotwire)
     ];
 
     internal static IReadOnlyList<Type> EiliUncommonCardTypes { get; } = [
-        typeof(ExtraPlating),
-        typeof(SpeedIsSafety),
-        typeof(HullCrack),
-        typeof(AnchorShot),
-        typeof(Foresight),
-        typeof(HackFlightControls),
-        typeof(Improvising)
+        typeof(EiliExtraPlating),
+        typeof(EiliSpeedIsSafety),
+        typeof(EiliHullCrack),
+        typeof(EiliAnchorShot),
+        typeof(EiliForesight),
+        typeof(EiliHackFlightControls),
+        typeof(EiliImprovising)
     ];
+    internal static IReadOnlyList<Type> EiliRareCardTypes { get; } = [
+        typeof(EiliPickMeUp),
+        typeof(EiliInspiration),
+        typeof(EiliTargettingScramble),
+        typeof(EiliReroutePower),
+        typeof(EiliDumpCargo)
+    ];
+
     internal static IReadOnlyList<Type> BraidStarterCardTypes { get; } = [
-        typeof(BigHit),
-        typeof(Driveby),
+        typeof(BraidBigHit),
+        typeof(BraidShoveIt)
     ];
 
     internal static IReadOnlyList<Type> BraidCommonCardTypes { get; } = [
-        typeof(Haymaker),
-        typeof(LeftHook),
-        typeof(LimiterOff),
-        typeof(Pummel),
-        typeof(ShoveIt)
-    ];
-
-    internal static IReadOnlyList<Type> EiliRareCardTypes { get; } = [
-
+        typeof(BraidDriveby),
+        typeof(BraidPummel),
+        typeof(BraidLeftHook),
+        typeof(BraidHaymaker),
+        typeof(BraidInductionCoils),
+        typeof(BraidChargeBlast),
+        typeof(BraidMaxBlast),
+        typeof(BraidLimiterOff),
     ];
 
     internal static IReadOnlyList<Type> BraidUncommonCardTypes { get; } = [
-
+        typeof(BraidSneakAttack),
+        typeof(BraidFollowthrough),
+        typeof(BraidRetaliate),
+        typeof(BraidWindup),
+        typeof(BraidBide),
+        typeof(BraidArmourLock),
+        typeof(BraidDischarge),
     ];
 
     internal static IReadOnlyList<Type> BraidRareCardTypes { get; } = [
-
+        typeof(BraidSacrifice),
+        typeof(BraidRevenge),
+        typeof(BraidMissileBarrage),
+        typeof(BraidResolve),
+        typeof(BraidRetreat),
     ];
 
     internal static IEnumerable<Type> BraidCardTypes
@@ -139,7 +182,8 @@ public sealed class ModEntry : SimpleMod
         // Make stuff do stuff
         _ = new DisabledDampenersManager();
         _ = new ShockAbsorberManager();
-        _ = new TempShieldNewTurnManager();
+        _ = new TempShieldNextTurnManager();
+        _ = new KineticGeneratorManager();
 
         CustomTTGlossary.ApplyPatches(Harmony);
         
@@ -242,6 +286,36 @@ public sealed class ModEntry : SimpleMod
             },
             Name = this.AnyLocalizations.Bind(["status", "KineticGenerator", "name"]).Localize,
             Description = this.AnyLocalizations.Bind(["status", "KineticGenerator", "description"]).Localize
+        });
+        EqualPayback = Helper.Content.Statuses.RegisterStatus("EqualPayback", new()
+        {
+            Definition = new()
+            {
+                icon = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/sprites/icons/equalPayback.png")).Sprite,
+                color = new("c0c9e6")
+            },
+            Name = this.AnyLocalizations.Bind(["status", "EqualPayback", "name"]).Localize,
+            Description = this.AnyLocalizations.Bind(["status", "EqualPayback", "description"]).Localize
+        });
+        TempPowerdrive = Helper.Content.Statuses.RegisterStatus("TempPowerdrive", new()
+        {
+            Definition = new()
+            {
+                icon = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/sprites/icons/tempPowerdrive.png")).Sprite,
+                color = new("c0c9e6")
+            },
+            Name = this.AnyLocalizations.Bind(["status", "TempPowerdrive", "name"]).Localize,
+            Description = this.AnyLocalizations.Bind(["status", "TempPowerdrive", "description"]).Localize
+        });
+        Bide = Helper.Content.Statuses.RegisterStatus("Bide", new()
+        {
+            Definition = new()
+            {
+                icon = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/sprites/icons/bide.png")).Sprite,
+                color = new("c0c9e6")
+            },
+            Name = this.AnyLocalizations.Bind(["status", "Bide", "name"]).Localize,
+            Description = this.AnyLocalizations.Bind(["status", "Bide", "description"]).Localize
         });
         // Register cards
         foreach (var cardType in BraidCardTypes)

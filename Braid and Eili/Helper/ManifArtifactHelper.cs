@@ -1,17 +1,17 @@
 ﻿using System;
+/*
+namespace TwosCompany.Helper;
 
-namespace TwosCompany.Helper
+
+public static class ManifArtifactHelper
 {
+    public static String[] artifactNames = new string[] {
+    };
 
-    public static class ManifArtifactHelper
-    {
-        public static String[] artifactNames = new string[] {
-        };
+    public static String[] artifactLocs = new string[] {
+    };
 
-        public static String[] artifactLocs = new string[] {
-        };
-
-        public static string[] artifactTexts = new string[] {
-        };
-    }
+    public static string[] artifactTexts = new string[] {
+    };
 }
+*/

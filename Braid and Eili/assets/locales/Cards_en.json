@@ -1,10 +1,10 @@
 {
+  "character": {
     "Eili": {
       "name": "Eili",
       "description": "<c=42add1>Eili</c>\nA bubbly little fellow who loves to help others with her excentric solutions."
     },
-  "character": {
-    "Braid": {
+     "Braid": {
       "name": "Braid",
       "description": "<c=c0c9e6>Braid</c>\nA soldier who knows when victory necessitates <c=downside>sacrifice</c>."
     }
@@ -25,6 +25,36 @@
     "KineticGenerator": {
       "name": "Kinetic Generator",
       "description": "Gain <c=status>TEMP SHIELD</c> for all distance moved. </c=downside>Decreases by 1 each turn</c>."
+    },
+    "Bide": {
+      "name": "Bide",
+      "description": "Damage received is stored and added to next <c=keyword>attack</c>."
+    }
+  },
+  "artifact": {
+    "character": {
+      "Eili": {
+        "ArtifactNumber1": {
+          "name": "ABCDE",
+          "description": [
+            "paragraph1.",
+            "paragraph2."
+          ],
+          "combatDescription": [
+            "newparagraph1.",
+            "newparagraph2."
+          ]
+        }
+      },
+      "Braid": {
+        "BraidArtifact": {
+          "name": "BRAIDARTIFACT",
+          "description": [
+            "paragraph1.",
+            "paragraph2."
+          ]
+        }
+      }
     }
   },
   "card": {
@@ -102,6 +132,88 @@
     },
     "Improvising": {
       "name": "Improvising"
+    },
+    "PickMeUp": {
+      "name": "Pick Me Up"
+    },
+    "Inspiration": {
+      "name": "Inspiration",
+      "description": {
+        "None": "Pick a card from your hand and remove its <c=cardtrait>exhaust</c>.",
+        "A": "Pick a card from your hand and remove its <c=cardtrait>exhaust</c>.",
+        "B": "Pick a card from your <c=keyword>draw pile</c> and remove its <c=cardtrait>exhaust</c>."
+      }
+    },
+    "TargettingScramble": {
+      "name": "Targetting Scramble",
+      "description": "Reverse direction of all <c=midrow>midrow</c> objects."
+    },
+    "ReroutePower": {
+      "name": "Reroute Power"
+    },
+    "DumpCargo": {
+      "name": "Dump Cargo!",
+      "description": {
+        "None": "You and the enemy both lauch <c=midrow>asteroids</c> from all missile bays.",
+        "A": "You and the enemy both lauch <c=midrow>mines</c> from all missile bays.",
+        "B": "You and the enemy both lauch <c=midrow>missiles</c> from all missile bays."
+      }
+    },
+    "InductionCoils": {
+      "name": "Induction Coils"
+    },
+    "ChargeBlast": {
+      "name": "Charge Blast",
+      "description": {
+        "None": "<c=keyword>Discard</c> your hand. Add a <c=card>Max Blast</c> to your hand. <c=downside>Gain -1 Energy next turn</c>.",
+        "A": "<c=keyword>Discard</c> your hand. Add a <c=card>Max Blast A</c> to your hand. <c=downside>Gain -1 Energy next turn</c>.",
+        "B": "<c=keyword>Discard</c> your hand. Add a <c=card>Max Blast</c> to your hand. <c=downside>Gain -1 Energy next turn</c>."
+      }
+    },
+    "MaxBlast": {
+      "name": "Max Blast"
+    },
+    "SneakAttack": {
+      "name": "Sneak Attack"
+    },
+    "Followthrough": {
+      "name": "Followthrough"
+    },
+    "Retaliate": {
+      "name": "Retaliate"
+    },
+    "Windup": {
+      "name": "Windup"
+    },
+    "Bide": {
+      "name": "Bide"
+    },
+    "ArmourLock": {
+      "name": "Armour Lock"
+    },
+    "Discharge": {
+      "name": "Discharge"
+    },
+    "Sacrifice": {
+      "name": "Sacrifice"
+    },
+    "Revenge": {
+      "name": "Revenge",
+      "description": {
+        "None": "Pierce attack. Dmg = Hull lost this combat.",
+        "A": "Pierce attack. Dmg = Hull lost this combat.",
+        "B": "Pierce attack. Dmg = Hull lost this combat. Apply <c=redd>Brittle</c>."
+      }
+    },
+    "MissileBarrage": {
+      "name": "Missile Barrage"
+    },
+    "Resolve": {
+      "name": "Resolve"
+    },
+    "Retreat": {
+      "name": "Retreat",
+      "description": "<c=keyword>End combat</c> next turn and skip all rewards. <c=downside>Cannot be played during boss battles</c>."
     }
   }
 }
