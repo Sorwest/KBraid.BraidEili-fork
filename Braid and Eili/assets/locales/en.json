@@ -1,11 +1,11 @@
 {
   "ChoiceCardRewardOfYourColorChoice_KB.BraidEili.EiliDeck:0": "Hey guys! i just had the craziest idea!", //Eili happy
   "ChoiceCardRewardOfYourColorChoice_KB.BraidEili.BraidDeck:0": "...", //Braid serious
-
+  
   "LoseCharacterCard_KB.BraidEili.EiliDeck:0": "Aw... That was my favorite...", //Eili sad
   "LoseCharacterCard_KB.BraidEili.EiliDeck:1": "To be honest, i acutally wasn't expecting that to work.", //Eili concernded
   "LoseCharacterCard_KB.BraidEili.BraidDeck:0": "Survival was more important.", //Braid serious
-
+  
   "CrystallizedFriendEvent_KB.BraidEili.EiliDeck:0": "Mmmh... is it morning already?", //Eili sad
   "CrystallizedFriendEvent_KB.BraidEili.EiliDeck:1": "Hello again!", //Eili happy
   "CrystallizedFriendEvent_KB.BraidEili.BraidDeck:0": "...", //Braid blink
@@ -13,21 +13,21 @@
 
   "KB_GrandmaShop_Eili:0": "Brownies!",
   "KB_GrandmaShop_Braid:0": "Ammo.",
-
+  
   "KB_BraidEili_CharStart_0:0": "...", //Eili neutral
   "KB_BraidEili_CharStart_0:1": "...", //Braid neutral
   "KB_BraidEili_CharStart_0:2": "...", //Eili happy
-
+  
   "KB_Eili_CharStart_0:0": "Alright team! Time to take another...", //cat neutral
   "KB_Eili_CharStart_0:1": "Wait who-?", //cat grumpy
-  "KB_Eili_CharStart_0:2": "Hello!", //Eili neutral
+  "KB_Eili_CharStart_0:2": "Hello!",  //Eili neutral
   "KB_Eili_CharStart_0:3": "...", //cat worried
   "KB_Eili_CharStart_0:4": "Hello?", //cat squint
   "KB_Eili_CharStart_0:5": "Hi!", //Eili neutral
   "KB_Eili_CharStart_0:6": "...", //cat squint
   "KB_Eili_CharStart_0:7": "Welcome abord!", //cat neutral
   "KB_Eili_CharStart_0:8": "Thank you!", //Eili happy
-
+  
   "KB_Braid_CharStart_0:0": "Ah. Another one.", //cat grumpy
   "KB_Braid_CharStart_0:1": "...", //Braid blink
   "KB_Braid_CharStart_0:2": "...", //cat worried
@@ -38,20 +38,20 @@
   "KB_Braid_CharStart_0:7": "Don't talk much do you?", //cat neutral
   "KB_Braid_CharStart_0:8": "I take orders.", //Braid neutral
   "KB_Braid_CharStart_0:9": "Right...", //cat squint
-
+  
   "KB_VoidZoneEiliBraid_0:0": "...", //Eili cheeky
   "KB_VoidZoneEiliBraid_0:1": "...", //Braid neutral
   "KB_VoidZoneEiliBraid_0:2": "...", //Eili cheekyA
   "KB_VoidZoneEiliBraid_0:3": "...", //braid unamused
   "KB_VoidZoneEiliBraid_0:4": "...", //braid hugA
   "KB_VoidZoneEiliBraid_0:5": "...", //braid hugB
-
+  
   "KB_Eili_Cobalt_0:0": "",
 
   "KB_Braid_Cobalt_0:0": "",
-
+  
   "KB_BraidEili_Cobalt_0:0": "",
-
+  
   // picking Eili flips a flag that changes Braid's memory dialogue, revealing Eili's text
   "RunWinKBWho_Eili_1:0": "You should not exist.", //void
   "RunWinKBWho_Eili_1:1": "I know.", //eili concerned
@@ -59,7 +59,7 @@
   "RunWinKBWho_Eili_1:3": "Maybe.", //eili concerned
   "RunWinKBWho_Eili_1:4": "Is it to express individuality or to encourage introspective?", //void
   "RunWinKBWho_Eili_1:5": "A little of both.", //eili neutral
-
+  
   "RunWinKBWho_Braid_1:0": "You treat your existence like it has no purpose.", //void
   "RunWinKBWho_Braid_1:1": "Surviving only in the moment. Any thoughts to the future being in consideration of tactical advantages.", //void
   "RunWinKBWho_Braid_1:2": "I am a soldier.", //braid neutral
@@ -182,14 +182,14 @@
   "KB_Eili_Card_DumpCargo:0d": "Special Delivery!",
 
   "KB_Braid_Card_Resolve_HullDepleated:0": "NOT YET! WE'RE NOT FINISHED YET!!!",
-
+  
   "KB_Braid_EiliWentMissing:0": "Eili? EILI!!!",
   "KB_Eili_BraidWentMissing:0": "B! Where'd you go!? Guys B's gone!!",
-
+  
   "KB__CheapCardPlayed_Multi_0": "",
-
+  
   "KB__EmptyHandWithEnergy_0": "",
-
+  
   "KB__EnemyArmorHit:0": "",
   "KB__EnemyArmorHitLots:0": "",
   "KB__EnemyArmorPierced:0": "",
@@ -199,82 +199,82 @@
   "KB__HandOnlyHasUnplayableCards:0": "",
   "KB_Eili_JustPlayedASashaCard:0": "SportballGO!!!",
   "KB__JustPlayedAnEphemeralCard:0": "",
-
+  
   "KB__HostileDrones:0": "",
   "KB__HostileSeeker:0": "",
-
+  
   "KB__JustHitGeneric:0": "",
 
   "KB__ManyFlips:0": "",
   "KB__ManyTurns:0": "",
   "KB__VeryManyTurns:0": "",
-
+  
   "KB_Eili_OneHitPointThisIsFine:0a": "We're gonna be alright.... Right?",
   "KB_Eili_OneHitPointThisIsFine:0b": "I'm... I'm scared...",
   "KB_Eili_OneHitPointThisIsFine:0c": "N-no! No more! Please!",
   "KB_Braid_OneHitPointThisIsFine:0": "Not yet...",
 
   "KB_BraidEili_AboutToDieAndLoop_0:0": "",
-
+  
   "KB__PlayedManyCards:0": "",
-
+  
   "KB__WeJustGainedHeat:0": "",
 
   "KB__WeJustGainedHeat_Drake:0": "",
   "KB__WeJustGainedHeat_Ilya:0": "",
-
+  
   "KB__OverheatIlyasFault:0": "",
   "KB__OverheatDrakesFault:0": "",
-
+  
   "KB__WeJustOverheated:0": "",
-
+  
   "KB__OverheatGeneric:0": "",
-
+  
   "KB__StrafeHit:0": "",
 
   "KB_Eili_WeDidOverFiveDamage_0:0a": "Bang Bang Pow!",
   "KB_Eili_WeDidOverFiveDamage_0:0b": "Love the enthusiasm.",
-
+  
   "KB__WeMissedOopsie_0:0": "",
-
-
-
+  
+  
+  
   "KB_Eili_ThatsALotOfDamageToThem_0:0a": "KILL!! MURDER!!!",
   "KB_Eili_ThatsALotOfDamageToThem_0:0b": "Whoa! Calm down Eili!",
   "KB__ThatsALotOfDamageToUs_0:0": "",
-
+  
   "KB__TheyGotCorroded_0:0": "",
-
+  
   "KB__TheyHaveAutoDodgeLeft_0:0": "",
   "KB__TheyHaveAutoDodgeRight_0:0": "",
   "KB__TookZeroDamageAtLowHealth_0:0": "",
-
+  
   "KB__WeAreCorroded_0:0": "",
-
+  
   "KB_Eili_WeAreMovingAroundALot_0:0": "Wheeeee!",
-
-
+  
+  
   "KB__WeDontOverlapWithEnemyAtAllButWeDoHaveASeekerToDealWith_0:0": "",
-
-
+  
+  
   "KB__WeDontOverlapWithEnemyAtAll_0:0": "",
 
   "KB_Braid_WeGotHurtButNotTooBad_0:0": "Walk it off, we're fine.",
-
+  
   "KB__WeGotShotButTookNoDamage_0:0": "",
-
+  
   "KB__Bramblepelt_0:0": "",
-
+  
   "KB__Knight_Midcombat_Greeting_0:0": "",
   "KB_Isa_Knight_Midcombat_Greeting_Infinite:0": "",
-
+  
   "KB__Miner:0": "",
   "KB__Miner_Infinite:0": "",
   "KB_Braid_MinerOncePerFightShouts:0": "Such agression. I'll meet it in kind.",
   "KB_Braid_MinerOncePerFightShouts:1": "Good it will make things interesting.",
-
+  
   "KB__PlayedManyCards_Multi_0:0": "",
-
+  
   "KB__ShopkeeperInfinite_0:0": ""
-
+  
 }
