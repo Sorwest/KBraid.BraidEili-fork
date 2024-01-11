@@ -2,4 +2,14 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/Braid and Eili/obj/MakeTypesPublic/Assemblies/CobaltCore.dll
+**/.vs/**
+*/bin/**
+*/obj/**
+*/.bin/**
+*/.obj/**
+*/.release/**
+packages/**
+**/*.zip
+*.user
+*.user.*
+**/CobaltCore.dll
