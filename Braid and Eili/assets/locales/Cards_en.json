@@ -1,12 +1,12 @@
 {
+    "Eili": {
+      "name": "Eili",
+      "description": "<c=42add1>Eili</c>\nA bubbly little fellow who loves to help others with her excentric solutions."
+    },
   "character": {
     "Braid": {
       "name": "Braid",
       "description": "<c=c0c9e6>Braid</c>\nA soldier who knows when victory necessitates <c=downside>sacrifice</c>."
-    },
-    "Eili": {
-      "name": "Eili",
-      "description": "<c=42add1>Eili</c>\nA bubbly little fellow who loves to help others with her excentric solutions."
     }
   },
   "status": {
