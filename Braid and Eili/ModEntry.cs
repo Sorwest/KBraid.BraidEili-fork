@@ -10,17 +10,18 @@ using System.Linq;
 namespace KBraid.BraidEili;
 
 /* TO-DO
- * DisabledDampeners Status -keep track of X damage taken, gain X Evade, move X random. Decrease 1 on turn start
- * ShockAbsorber Status -keep track of X damage taken, gain X TempShieldNextTurn
+ * DisabledDampeners Status -keep track of X damage taken, gain X*status Evade, move X*status random. Decrease 1 on turn start
+ *                      WAITING FOR A FIX
+ * ShockAbsorber Status -keep track of X damage taken, gain X*status TempShieldNextTurn
  * TempShieldNextTurn Status
- * KineticGenerator Status -keep track of movement amounts, give temp shield accordingly
+ * KineticGenerator Status -keep track of X movement amounts, give X*status temp shield accordingly
  * AApplyTempBrittle Action -if IsRandom, choose random enemy part and give it new TempBrittle. if !IsRandom, part in front of active cannon gets it, remove TempBrittle on hit
  * -new TempBrittle dmg modifier
  * AApplyTempArmor Action -keep track of current part dmg modifiers, apply new TempArmor dmg modifier until start of turn
  * -new TempArmor dmg modifier
  * Make Inspiration Action -select card, remove exhaust from card
  * ALaunchMidrow Action -find a way to add enemy intent mid-turn, active specific intents
- * EqualPayback Status -keep track of all damage taken, fire the value, remove at start of turn
+ * EqualPayback Status -keep track of all damage taken, fire the value, decrease by 1 on turn start
  * TempPowerdrive Status -powerdrive, lose all stacks on turn end
  * Bide Status -keep track of all damage taken, add value to next attack, remove bide
  * ASacrifice Action -select card, exhaust card, keep int of card cost, return it
@@ -31,12 +32,13 @@ namespace KBraid.BraidEili;
  * Make Retreat Action -find a way to access PlayerWon(g) and flag it noRewards = true
  * Eili Artifacts
  * Braid Artifacts
+ * Unlock Req:   Eili : Win 5 times
+ *              Braid : Win with Eili
  * Story
  */
 public sealed class ModEntry : SimpleMod
 {
     internal static ModEntry Instance { get; private set; } = null!;
-
     internal Harmony Harmony { get; }
     internal IKokoroApi KokoroApi { get; }
     internal ILocalizationProvider<IReadOnlyList<string>> AnyLocalizations { get; }
@@ -89,9 +91,7 @@ public sealed class ModEntry : SimpleMod
         "braid",
         "eili"
     ];
-    internal Dictionary<string, ISpriteEntry> Sprites { get; } = [
-
-    ];
+    internal Dictionary<string, ISpriteEntry> Sprites { get; } = [];
 
     internal static IReadOnlyList<Type> EiliStarterCardTypes { get; } = [
         typeof(EiliPadding),
@@ -158,6 +158,18 @@ public sealed class ModEntry : SimpleMod
         typeof(BraidResolve),
         typeof(BraidRetreat),
     ];
+    internal static IReadOnlyList<Type> BraidCommonArtifactTypes { get; } = [
+
+    ];
+    internal static IReadOnlyList<Type> BraidBossArtifactTypes { get; } = [
+
+    ];
+    internal static IReadOnlyList<Type> EiliCommonArtifactTypes { get; } = [
+
+    ];
+    internal static IReadOnlyList<Type> EiliBossArtifactTypes { get; } = [
+
+    ];
 
     internal static IEnumerable<Type> BraidCardTypes
         => BraidStarterCardTypes
@@ -169,14 +181,20 @@ public sealed class ModEntry : SimpleMod
         .Concat(EiliCommonCardTypes)
         .Concat(EiliUncommonCardTypes)
         .Concat(EiliRareCardTypes);
+    internal static IEnumerable<Type> BraidArtifactTypes
+        => BraidCommonArtifactTypes
+        .Concat(BraidBossArtifactTypes);
+    internal static IEnumerable<Type> EiliArtifactTypes
+        => EiliCommonArtifactTypes
+        .Concat(EiliBossArtifactTypes);
 
     public ModEntry(IPluginPackage<IModManifest> package, IModHelper helper, ILogger logger) : base(package, helper, logger)
     {
         Instance = this;
         Harmony = new(package.Manifest.UniqueName);
         KokoroApi = helper.ModRegistry.GetApi<IKokoroApi>("Shockah.Kokoro")!;
-        //KokoroApi.RegisterTypeForExtensionData(typeof(AHurt));
-        //KokoroApi.RegisterTypeForExtensionData(typeof(AAttack));
+        KokoroApi.RegisterTypeForExtensionData(typeof(AHurt));
+        KokoroApi.RegisterTypeForExtensionData(typeof(AAttack));
         //KokoroApi.RegisterCardRenderHook(new SpacingCardRenderHook(), 0);
 
         // Make stuff do stuff
