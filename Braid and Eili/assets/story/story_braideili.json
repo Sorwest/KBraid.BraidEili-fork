@@ -1,0 +1,1040 @@
+{
+  "all": {
+    "ChoiceCardRewardOfYourColorChoice_KB.BraidEili.EiliDeck": {
+      "type": "event",
+      "oncePerRun": true,
+      "bg": "BGBootSequence",
+      "lines": [
+        {
+          "$type": "Say, CobaltCore",
+          "who": "eili",
+          "loopTag": "happy",
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "comp",
+        }
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },
+    "ChoiceCardRewardOfYourColorChoice_KB.BraidEili.BraidDeck": {
+      "type": "event",
+      "oncePerRun": true,
+      "bg": "BGBootSequence",
+      "lines": [
+        {
+          "$type": "Say, CobaltCore",
+          "who": "braid",
+          "loopTag": "serious",
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "comp",
+        }
+      ],
+      "allPresent": [
+        "braid"
+      ]
+    },
+    "LoseCharacterCard_KB.BraidEili.EiliDeck_0": {
+      "type": "event",
+      "oncePerRun": true,
+      "bg": "BGBootSequence",
+      "lines": [
+        {
+          "$type": "Say, CobaltCore",
+          "who": "eili",
+          "loopTag": "sad",
+        },
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },
+    "LoseCharacterCard_KB.BraidEili.EiliDeck_1": {
+      "type": "event",
+      "oncePerRun": true,
+      "bg": "BGBootSequence",
+      "lines": [
+        {
+          "$type": "Say, CobaltCore",
+          "who": "eili",
+          "loopTag": "concernded",
+        },
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },
+    "LoseCharacterCard_KB.BraidEili.BraidDeck": {
+      "type": "event",
+      "oncePerRun": true,
+      "bg": "BGBootSequence",
+      "lines": [
+        {
+          "$type": "Say, CobaltCore",
+          "who": "braid",
+          "loopTag": "serious",
+        },
+      ],
+      "allPresent": [
+        "braid"
+      ]
+    },
+    "CrystallizedFriendEvent_KB.BraidEili.EiliDeck_0": {
+      "type": "event",
+      "oncePerRun": true,
+      "bg": "BGCrystalizedFriend",
+      "lines": [
+        {
+          "$type": "Wait, CobaltCore",
+          "secs": 1.5
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "eili",
+          "loopTag": "sad"
+        }
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },
+    "CrystallizedFriendEvent_KB.BraidEili.EiliDeck_1": {
+      "type": "event",
+      "oncePerRun": true,
+      "bg": "BGCrystalizedFriend",
+      "lines": [
+        {
+          "$type": "Wait, CobaltCore",
+          "secs": 1.5
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "eili",
+          "loopTag": "happy"
+        }
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },
+    "CrystallizedFriendEvent_KB.BraidEili.BraidDeck_0": {
+      "type": "event",
+      "oncePerRun": true,
+      "bg": "BGCrystalizedFriend",
+      "lines": [
+        {
+          "$type": "Wait, CobaltCore",
+          "secs": 1.5
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "braid",
+          "loopTag": "blink"
+        }
+      ],
+      "allPresent": [
+        "braid"
+      ]
+    },
+    "CrystallizedFriendEvent_KB.BraidEili.BraidDeck_1": {
+      "type": "event",
+      "oncePerRun": true,
+      "bg": "BGCrystalizedFriend",
+      "lines": [
+        {
+          "$type": "Wait, CobaltCore",
+          "secs": 1.5
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "braid",
+          "loopTag": "neutral"
+        }
+      ],
+      "allPresent": [
+        "braid"
+      ]
+    },
+
+
+
+
+
+    "KB_Eili_CharStart_0": {
+      "type": "event",
+      "lookup": [
+        "zone_first"
+      ],
+      "bg": "BGRunStart",
+      "allPresent": [
+        "eili"
+      ],
+      "once": true,
+      "lines": [
+        { "$type": "Say, CobaltCore",
+          "who": "comp",
+          "loopTag": "neutral",
+        }, { "$type": "Say, CobaltCore",
+          "who": "comp",
+          "loopTag": "grumpy",
+        }, { "$type": "Say, CobaltCore",
+          "who": "eili",
+          "loopTag": "neutral",
+          "flipped": true,
+        }, { "$type": "Say, CobaltCore",
+          "who": "comp",
+          "loopTag": "worried",
+        }, { "$type": "Say, CobaltCore",
+          "who": "comp",
+          "loopTag": "squint",
+        }, { "$type": "Say, CobaltCore",
+          "who": "eili",
+          "loopTag": "neutral",
+          "flipped": true,
+        }, { "$type": "Say, CobaltCore",
+          "who": "comp",
+          "loopTag": "squint",
+        }, { "$type": "Say, CobaltCore",
+          "who": "comp",
+          "loopTag": "neutral",
+        }, { "$type": "Say, CobaltCore",
+          "who": "eili",
+          "loopTag": "happy",
+          "flipped": true,
+        }, { "$type": "Say, CobaltCore",
+          "who": "comp",
+        }, 
+      ]
+    },
+
+    "KB_Braid_CharStart_0": {
+      "type": "event",
+      "lookup": [
+        "zone_first"
+      ],
+      "bg": "BGRunStart",
+      "allPresent": [
+        "braid"
+      ],
+      "once": true,
+      "lines": [
+        { "$type": "Say, CobaltCore",
+          "who": "comp",
+          "loopTag": "grumpy",
+        }, { "$type": "Say, CobaltCore",
+          "who": "braid",
+          "loopTag": "blink",
+          "flipped": true,
+        }, { "$type": "Say, CobaltCore",
+          "who": "comp",
+          "loopTag": "worried",
+        }, { "$type": "Say, CobaltCore",
+          "who": "braid",
+          "loopTag": "neutral",
+          "flipped": true,
+        }, { "$type": "Say, CobaltCore",
+          "who": "comp",
+          "loopTag": "mad",
+        }, { "$type": "Say, CobaltCore",
+          "who": "braid",
+          "loopTag": "neutral",
+          "flipped": true,
+        }, { "$type": "Say, CobaltCore",
+          "who": "comp",
+          "loopTag": "squint",
+        }, { "$type": "Say, CobaltCore",
+          "who": "comp",
+          "loopTag": "neutral",
+        }, { "$type": "Say, CobaltCore",
+          "who": "eili",
+          "loopTag": "neutral",
+          "flipped": true,
+        }, { "$type": "Say, CobaltCore",
+          "who": "comp",
+          "loopTag": "squint",
+        }, 
+      ]
+    },
+
+    "KB_BraidEili_CharStart_0": {
+      "type": "event",
+      "lookup": [
+        "zone_first"
+      ],
+      "bg": "BGRunStart",
+      "allPresent": [
+        "braid"
+        "eili"
+      ],
+      "once": true,
+      "lines": [
+        { "$type": "Say, CobaltCore",
+          "who": "eili",
+        "loopTag": "neutral",},
+        { "$type": "Say, CobaltCore",
+          "who": "braid",
+          "loopTag": "neutral",
+        "flipped": true,},
+        { "$type": "Say, CobaltCore",
+          "who": "eili",
+        "loopTag": "happy",},
+      ]
+    },
+
+
+
+    "KB_VoidZoneEiliBraid_0": {
+      "type": "event",
+      "lookup": [
+        "zone_three"
+      ],
+      "once": true,
+      "priority": true,
+      "allPresent": [
+        "eili",
+        "braid",
+      ],
+      "lines": [
+        {
+          "$type": "Say, CobaltCore",
+          "who": "eili",
+          "loopTag": "cheeky",
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "braid",
+          "loopTag": "neutral",
+          "flipped": true,
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "eili",
+          "loopTag": "cheekyA",
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "braid",
+          "loopTag": "unamused",
+          "flipped": true,
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "braid",
+          "loopTag": "hugA",
+          "flipped": true,
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "braid",
+          "loopTag": "hugB",
+          "flipped": true,
+        },
+      ]
+    },
+
+    "KB_Eili_Card_IdentifyWeakpoint": {
+      "type": "combat",
+      "lookup": [
+        "KB_IdentifyWeakpoint"
+      ],
+      "oncePerCombatTags": [
+        "KB_IdentifyWeakpoint"
+      ],
+      "priority": true,
+      "lines": [
+        {
+          "$type": "SaySwitch, CobaltCore",
+          "lines": [
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "neutral"
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "neutral"
+            },
+          ]
+        },
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },	
+    "KB_Eili_Card_DisableDampeners": {
+      "type": "combat",
+      "lookup": [
+        "KB_DisableDampeners"
+      ],
+      "oncePerCombatTags": [
+        "KB_DisableDampeners"
+      ],
+      "priority": true,
+      "lines": [
+        {
+          "$type": "SaySwitch, CobaltCore",
+          "lines": [
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "concerned"
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "neutral"
+            },
+          ]
+        },
+        {
+          "$type": "SaySwitch, CobaltCore",
+          "lines": [
+           {
+             "$type": "Say, CobaltCore",
+             "who": "riggs",
+             "loopTag": "nervous",
+           },
+           {
+             "$type": "Say, CobaltCore",
+             "who": "peri",
+             "loopTag": "panic",
+           },
+           {
+             "$type": "Say, CobaltCore",
+             "who": "dizzy",
+             "loopTag": "intense",
+           },
+           {
+             "$type": "Say, CobaltCore",
+             "who": "goat",
+             "loopTag": "panic",
+           },
+           {
+             "$type": "Say, CobaltCore",
+             "who": "eunice",
+             "loopTag": "mad",
+           },
+           {
+             "$type": "Say, CobaltCore",
+             "who": "hacker",
+             "loopTag": "mad",
+           },
+           {
+             "$type": "Say, CobaltCore",
+             "who": "shard",
+             "loopTag": "stoked",
+           },
+           {
+             "$type": "Say, CobaltCore",
+             "who": "comp",
+             "loopTag": "worried",
+           },
+           {
+             "$type": "Say, CobaltCore",
+             "who": "nola",
+             "loopTag": "angry",
+           },
+           {
+             "$type": "Say, CobaltCore",
+             "who": "isa",
+             "loopTag": "annoyed",
+           },
+           {
+            "$type": "Say, CobaltCore",
+            "who": "ilya",
+            "loopTag": "intense",
+          },
+        ]
+        },
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },	
+    "KB_Eili_Card_Hotwire": {
+      "type": "combat",
+      "lookup": [
+        "KB_Hotwire"
+      ],
+      "oncePerCombatTags": [
+        "KB_Hotwire"
+      ],
+      "priority": true,
+      "lines": [
+        {
+          "$type": "SaySwitch, CobaltCore",
+          "lines": [
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "concerned"
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "concerned"
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "concerned"
+            },
+          ]
+        },
+        {
+          "$type": "SaySwitch, CobaltCore",
+          "lines": [
+            {
+              "$type": "Say, CobaltCore",
+              "who": "riggs",
+              "loopTag": "nervous",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "peri",
+              "loopTag": "panic",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "dizzy",
+              "loopTag": "intense",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "goat",
+              "loopTag": "panic",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eunice",
+              "loopTag": "mad",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "hacker",
+              "loopTag": "mad",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "shard",
+              "loopTag": "stoked",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "comp",
+              "loopTag": "worried",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "nola",
+              "loopTag": "angry",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "isa",
+              "loopTag": "annoyed",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "ilya",
+              "loopTag": "intense",
+            },
+          ]
+        },
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },  
+    "KB_Eili_Card_AnchorShot": {
+      "type": "combat",
+      "lookup": [
+        "KB_AnchorShot"
+      ],
+      "oncePerCombatTags": [
+        "KB_AnchorShot"
+      ],
+      "priority": true,
+      "playerShotJustHit": true,
+      "lines": [
+        {
+          "$type": "SaySwitch, CobaltCore",
+          "lines": [
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "neutral"
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "neutral"
+            },
+          ]
+        },
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },
+    "KB_Eili_Card_PickMeUp": {
+      "type": "combat",
+      "lookup": [
+        "KB_PickMeUp"
+      ],
+      "oncePerCombatTags": [
+        "KB_PickMeUp"
+      ],
+      "priority": true,
+      "lines": [
+        {
+          "$type": "SaySwitch, CobaltCore",
+          "lines": [
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "happy"
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "happy"
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "happy"
+            },
+          ]
+        },
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },
+    "KB_Eili_Card_Inspiration": {
+      "type": "combat",
+      "lookup": [
+        "KB_Inspiration"
+      ],
+      "oncePerCombatTags": [
+        "KB_Inspiration"
+      ],
+      "priority": true,
+      "lines": [
+        {
+          "$type": "SaySwitch, CobaltCore",
+          "lines": [
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "happy"
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "happy"
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "happy"
+            },
+          ]
+        },
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },
+    "KB_Eili_Card_TargettingScramble": {
+      "type": "combat",
+      "lookup": [
+        "KB_TargettingScramble"
+      ],
+      "oncePerCombatTags": [
+        "KB_TargettingScramble"
+      ],
+      "priority": true,
+      "lines": [
+        {
+          "$type": "SaySwitch, CobaltCore",
+          "lines": [
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "neutral"
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "neutral"
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "neutral"
+            },
+          ]
+        },
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },
+    "KB_Eili_Card_ReroutePower": {
+      "type": "combat",
+      "lookup": [
+        "KB_ReroutePower"
+      ],
+      "oncePerCombatTags": [
+        "KB_ReroutePower"
+      ],
+      "priority": true,
+      "lines": [
+        {
+          "$type": "SaySwitch, CobaltCore",
+          "lines": [
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "neutral"
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "neutral"
+            },
+          ]
+        },
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },
+    "KB_Eili_Card_DumpCargo": {
+      "type": "combat",
+      "lookup": [
+        "KB_DumpCargo"
+      ],
+      "oncePerCombatTags": [
+        "KB_DumpCargo"
+      ],
+      "priority": true,
+      "lines": [
+        {
+          "$type": "SaySwitch, CobaltCore",
+          "lines": [
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "happy"
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "happy"
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "happy"
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "happy"
+            },
+          ]
+        },
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },
+
+    "KB_Braid_EiliWentMissing": {
+      "type": "combat",
+      "lastTurnPlayerStatuses": [
+        "missingEili"
+      ],
+      "priority": true,
+      "oncePerCombatTags": [
+        "booksWentMissing"
+      ],
+      "oncePerRun": true,
+      "lines": [
+        {
+          "$type": "Say, CobaltCore",
+          "who": "braid",
+          "loopTag": "shout",
+        }
+      ],
+      "allPresent": [
+        "braid"
+      ]
+    },
+    "KB_Eili_BraidWentMissing": {
+      "type": "combat",
+      "lastTurnPlayerStatuses": [
+        "missingBraid"
+      ],
+      "priority": true,
+      "oncePerCombatTags": [
+        "CatWentMissing"
+      ],
+      "oncePerRun": true,
+      "lines": [
+        {
+          "$type": "Say, CobaltCore",
+          "who": "eili",
+          "loopTag": "sad",
+        }
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },
+    "KB_Eili_JustPlayedASashaCard": {
+      "type": "combat",
+      "whoDidThat": "sasha",
+      "oncePerRunTags": [
+        "usedAToothCard"
+      ],
+      "lines": [
+        {
+          "$type": "Say, CobaltCore",
+          "who": "eili",
+          "loopTag": "happy",
+        }
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },
+    "KB_Eili_OneHitPointThisIsFine": {
+      "type": "combat",
+      "oncePerCombatTags": [
+        "aboutToDie"
+      ],
+      "oncePerRun": true,
+      "enemyShotJustHit": true,
+      "maxHull": 1,
+      "lines": [
+        {
+          "$type": "SaySwitch, CobaltCore",
+          "lines": [
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "sad"
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "sad"
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eili",
+              "loopTag": "sad"
+            },
+          ]
+        },
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },
+    "KB_Braid_OneHitPointThisIsFine": {
+      "type": "combat",
+      "oncePerCombatTags": [
+        "aboutToDie"
+      ],
+      "oncePerRun": true,
+      "enemyShotJustHit": true,
+      "maxHull": 1,
+      "lines": [
+        {
+          "$type": "Say, CobaltCore",
+          "who": "braid",
+          "loopTag": "seriousC"
+        },
+      ],
+      "allPresent": [
+        "braid"
+      ]
+    },
+    "KB_Braid_Card_Resolve_HullDepleated": {
+      "type": "combat",
+      "oncePerCombatTags": [
+        "aboutToDie"
+      ],
+      "oncePerRun": true,
+      "enemyShotJustHit": true,
+      "maxHull": 1,
+      "lookup": [
+        "KB_Resolve"
+      ],
+      "lines": [
+        {
+          "$type": "Say, CobaltCore",
+          "who": "braid",
+          "loopTag": "shoutC"
+        },
+      ],
+      "allPresent": [
+        "braid"
+      ]
+    },
+
+    "KB_Eili_WeDidOverFiveDamage_0": {
+      "type": "combat",
+      "playerShotJustHit": true,
+      "minDamageDealtToEnemyThisAction": 6,
+      "lines": [
+        { "$type": "Say, CobaltCore",
+          "who": "eili",
+          "loopTag": "happy",
+        }
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },
+    "KB_Eili_ThatsALotOfDamageToThem_0": {
+      "type": "combat",
+      "playerShotJustHit": true,
+      "minDamageDealtToEnemyThisTurn": 10,
+      "lines": [
+        { "$type": "Say, CobaltCore",
+          "who": "eili",
+          "loopTag": "manic",
+        },
+        {
+          "$type": "SaySwitch, CobaltCore",
+          "lines": [
+            {
+              "$type": "Say, CobaltCore",
+              "who": "riggs",
+              "loopTag": "serious",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "peri",
+              "loopTag": "panic",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "dizzy",
+              "loopTag": "intense",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "goat",
+              "loopTag": "panic",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "eunice",
+              "loopTag": "panic",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "hacker",
+              "loopTag": "intense",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "shard",
+              "loopTag": "stoked",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "comp",
+              "loopTag": "worried",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "nola",
+              "loopTag": "angry",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "isa",
+              "loopTag": "shocked",
+            },
+            {
+              "$type": "Say, CobaltCore",
+              "who": "ilya",
+              "loopTag": "shocked",
+            },
+          ]
+        },
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },
+    "KB_Eili_WeAreMovingAroundALot_0": {
+      "type": "combat",
+      "minMovesThisTurn": 3,
+      "oncePerRun": true,
+      "lines": [
+        { "$type": "Say, CobaltCore",
+          "who": "eili",
+          "loopTag": "happy",
+        }
+      ],
+      "allPresent": [
+        "eili"
+      ]
+    },
+    "KB_Braid_WeGotHurtButNotTooBad_0": {
+      "type": "combat",
+      "enemyShotJustHit": true,
+      "minDamageDealtToPlayerThisTurn": 1,
+      "maxDamageDealtToPlayerThisTurn": 1,
+      "lines": [
+        {
+          "$type": "Say, CobaltCore",
+          "who": "braid",
+          "loopTag": "serious",
+        },
+      ],
+      "allPresent": [
+        "braid"
+      ]
+    },
+
+    "KB_Braid_MinerOncePerFightShouts": {
+      "type": "combat",
+      "turnStart": true,
+      "allPresent": [
+        "miner",
+        "braid"
+      ],
+      "enemyIntent": "wideBigAttack",
+      "oncePerCombatTags": [
+        "MinerGonnaSmackYa4X"
+      ],
+      "lines": [
+        {
+          "$type": "Say, CobaltCore",
+          "who": "braid",
+          "loopTag": "serious",
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "miner",
+        },
+      ]
+    },
+
+  }
+}

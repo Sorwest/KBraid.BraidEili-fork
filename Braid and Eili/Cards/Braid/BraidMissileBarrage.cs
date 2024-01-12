@@ -116,6 +116,7 @@ public class BraidMissileBarrage : Card, IModdedCard
                         thing = new Missile()
                         {
                             targetPlayer = false,
+                            missileType = MissileType.heavy
                         }
                     },
                     new AMove()
