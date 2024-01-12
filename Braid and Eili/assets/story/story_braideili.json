@@ -545,6 +545,291 @@
       ]
     },
 
+
+
+
+
+    "KB_Finale_Braid_1": {
+      "type": "event",
+      "oncePerCombat": true,
+      "zones": [
+        "zone_finale"
+      ],
+      "bg": "BGBlack",
+      "lines": [
+        {
+          "$type": "Say, CobaltCore",
+          "who": "comp",
+          "loopTag": "worried",
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "comp",
+          "loopTag": "sad",
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "flipped": true,
+          "who": "braid",
+          "loopTag": "ending_a",
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "flipped": true,
+          "who": "braid",
+          "loopTag": "ending_b",
+        }
+      ],
+      "allPresent": [
+        "braid"
+      ]
+    },
+
+    "Finale_PirateBoss_1": {
+      "type": "event",
+      "oncePerCombat": true,
+      "zones": [
+        "zone_finale"
+      ],
+      "bg": "BGBlack",
+      "lines": [
+        {
+          "$type": "Say, CobaltCore",
+          "flipped": true,
+          "who": "pirateBoss",
+          "loopTag": "squint",
+          "what": "Ugh... Huh..?",
+          "hash": "d1e75d9d"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "riggs",
+          "loopTag": "serious",
+          "what": "Hey. We're getting out.",
+          "hash": "5f752875"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "flipped": true,
+          "who": "pirateBoss",
+          "loopTag": "squint",
+          "what": "Congratulations. Have fun out there.",
+          "hash": "51f3d916"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "riggs",
+          "loopTag": "serious",
+          "what": "Together.",
+          "hash": "39779d91"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "flipped": true,
+          "who": "pirateBoss",
+          "loopTag": "squint",
+          "what": "That's an option?",
+          "hash": "62bfcfbb"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "riggs",
+          "loopTag": "serious",
+          "what": "Yeah.",
+          "hash": "d1b66454"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "flipped": true,
+          "who": "pirateBoss",
+          "loopTag": "serious",
+          "what": "Something will go wrong.",
+          "hash": "b94aa6c0"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "flipped": true,
+          "who": "pirateBoss",
+          "loopTag": "serious",
+          "what": "One of us will vaporize the other instantly when we're out.",
+          "hash": "68b561bf"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "flipped": true,
+          "who": "pirateBoss",
+          "loopTag": "squint",
+          "what": "Or something.",
+          "hash": "0b4ce93d"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "riggs",
+          "loopTag": "serious",
+          "what": "I'm willing to risk it if you are.",
+          "hash": "de425ee9"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "flipped": true,
+          "who": "pirateBoss",
+          "loopTag": "squint",
+          "what": "...",
+          "hash": "6b164032"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "flipped": true,
+          "who": "pirateBossThrow",
+          "loopTag": "crystalHold",
+          "what": "...",
+          "hash": "34a45384"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "flipped": true,
+          "who": "pirateBossThrow",
+          "loopTag": "crystalHold",
+          "what": "... Fine.",
+          "hash": "dee39242"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "flipped": true,
+          "who": "pirateBossThrow",
+          "loopTag": "crystalThrow",
+          "what": "CATCH!",
+          "hash": "8b6d1df8"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "riggs",
+          "loopTag": "catchAir",
+          "what": "...",
+          "hash": "af37567d"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "riggs",
+          "loopTag": "catchEyes",
+          "what": "...",
+          "hash": "af37567d"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "flipped": true,
+          "who": "pirateBossThrow",
+          "loopTag": "empty",
+          "what": "...",
+          "hash": "34a45384"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "riggs",
+          "loopTag": "catchEyes",
+          "what": "Woah.",
+          "hash": "b180608a"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "riggs",
+          "loopTag": "catch",
+          "what": "I...",
+          "hash": "9a6d758b"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "riggs",
+          "loopTag": "sad",
+          "what": "... I think I'm both of us?",
+          "hash": "b1c9f3d0"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "flipped": true,
+          "who": "eunice",
+          "loopTag": "sad",
+          "what": "It worked?",
+          "hash": "ca09166c"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "riggs",
+          "loopTag": "sad",
+          "what": "I have her memories.",
+          "hash": "90129e23"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "riggs",
+          "loopTag": "sad",
+          "what": "We're good to go.",
+          "hash": "94a030c6"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "flipped": true,
+          "who": "braid",
+          "loopTag": "ending_b",
+          "what": "We're happy for you Riggs.",
+          "hash": "ffffffff"
+        }
+      ],
+      "allPresent": [
+        "riggs",
+        "eunice",
+        "braid"
+      ]
+    },
+    "Finale_LastMidcombatCutscene_3": {
+      "type": "event",
+      "oncePerCombat": true,
+      "zones": [
+        "zone_finale"
+      ],
+      "bg": "BGBlack",
+      "lines": [
+        {
+          "$type": "Say, CobaltCore",
+          "who": "riggs",
+          "loopTag": "nervous",
+          "what": "If you're gonna do something, it's now or never!",
+          "hash": "ac8efac9"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "who": "shard",
+          "loopTag": "paws",
+          "what": "Use the power of friendship!!!",
+          "hash": "f00fbcd7"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "flipped": true,
+          "who": "comp",
+          "loopTag": "feralGlitch",
+          "what": "WHY DO YOU THINK I BROUGHT YOU ALL HERE?",
+          "hash": "a20da1e3"
+        },
+        {
+          "$type": "Say, CobaltCore",
+          "flipped": true,
+          "who": "braid",
+          "loopTag": "ending_c",
+          "what": "Everyone together! Punch through!!",
+          "hash": "ffffffff"
+        }
+      ],
+      "requiredScenes": [
+        "Finale_LastMidcombatCutscene_2"
+      ],
+      "allPresent": [
+        "riggs",
+        "shard",
+        "braid"
+      ]
+    },
+
     "KB_BraidEili_CharStart_0": {
       "type": "event",
       "lookup": [
