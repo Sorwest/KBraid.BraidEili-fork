@@ -313,7 +313,7 @@
         {
           "$type": "Say, CobaltCore",
           "who": "eili",
-          "loopTag": "cheekyA",
+          "loopTag": "cheeky_a",
         },
         {
           "$type": "Say, CobaltCore",
@@ -324,13 +324,13 @@
         {
           "$type": "Say, CobaltCore",
           "who": "braid",
-          "loopTag": "hugA",
+          "loopTag": "hug_a",
           "flipped": true,
         },
         {
           "$type": "Say, CobaltCore",
           "who": "braid",
-          "loopTag": "hugB",
+          "loopTag": "hug_b",
           "flipped": true,
         },
       ]
@@ -863,7 +863,7 @@
         {
           "$type": "Say, CobaltCore",
           "who": "braid",
-          "loopTag": "seriousC"
+          "loopTag": "serious_c"
         },
       ],
       "allPresent": [
@@ -885,7 +885,7 @@
         {
           "$type": "Say, CobaltCore",
           "who": "braid",
-          "loopTag": "shoutC"
+          "loopTag": "shout_c"
         },
       ],
       "allPresent": [
