@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Reflection;
 
 namespace KBraid.BraidEili.Cards;
-public class StunBeam : Card, IModdedCard
+public class BraidBigHit : Card, IModdedCard
 {
     public static void Register(IModHelper helper)
     {
-        helper.Content.Cards.RegisterCard("StunBeam", new()
+        helper.Content.Cards.RegisterCard("BigHit", new()
         {
             CardType = MethodBase.GetCurrentMethod()!.DeclaringType!,
             Meta = new()
@@ -16,61 +16,44 @@ public class StunBeam : Card, IModdedCard
                 rarity = Rarity.common,
                 upgradesTo = [Upgrade.A, Upgrade.B]
             },
-            Name = ModEntry.Instance.AnyLocalizations.Bind(["card", "StunBeam", "name"]).Localize
+            Name = ModEntry.Instance.AnyLocalizations.Bind(["card", "BigHit", "name"]).Localize
         });
     }
-    public override string Name() => "Stun Beam";
+    public override string Name() => "Big Hit";
 
     public override CardData GetData(State state)
     {
         CardData data = new CardData();
-        Upgrade upgrade1 = this.upgrade;
+        Upgrade upgrade = this.upgrade;
         int num = 1;
-        switch (upgrade1)
+        switch (upgrade)
         {
             case Upgrade.None:
                 num = 1;
                 break;
             case Upgrade.A:
-                num = 2;
+                num = 1;
                 break;
             case Upgrade.B:
-                num = 1;
+                num = 2;
                 break;
         }
         data.cost = num;
-        Upgrade upgrade2 = this.upgrade;
-        bool flag = false;
-        switch (upgrade2)
-        {
-            case Upgrade.None:
-                flag = false;
-                break;
-            case Upgrade.A:
-                flag = false;
-                break;
-            case Upgrade.B:
-                flag = true;
-                break;
-        }
-        data.exhaust = flag;
-        data.art = new Spr?(Spr.cards_StunCharge);
+        data.art = new Spr?(StableSpr.cards_Cannon);
         return data;
     }
 
     public override List<CardAction> GetActions(State s, Combat c)
     {
         Upgrade upgrade = this.upgrade;
-        List<CardAction> actions = new();
+        List<CardAction> actions = new List<CardAction>();
         switch (upgrade)
         {
             case Upgrade.None:
                 List<CardAction> cardActionList1 = new List<CardAction>();
                 cardActionList1.Add((CardAction)new AAttack()
                 {
-                    damage = this.GetDmg(s, 0),
-                    piercing = true,
-                    stunEnemy = true
+                    damage = this.GetDmg(s, 2),
                 });
                 actions = cardActionList1;
                 break;
@@ -78,26 +61,15 @@ public class StunBeam : Card, IModdedCard
                 List<CardAction> cardActionList2 = new List<CardAction>();
                 cardActionList2.Add((CardAction)new AAttack()
                 {
-                    damage = this.GetDmg(s, 0),
-                    piercing = true,
-                    stunEnemy = true
+                    damage = this.GetDmg(s, 3),
                 });
-                AAttack aattack1 = new AAttack();
-                aattack1.damage = this.GetDmg(s, 0);
-                aattack1.fast = true;
-                aattack1.piercing = true;
-                aattack1.stunEnemy = true;
-                aattack1.omitFromTooltips = true;
-                cardActionList2.Add((CardAction)aattack1);
                 actions = cardActionList2;
                 break;
             case Upgrade.B:
                 List<CardAction> cardActionList3 = new List<CardAction>();
                 cardActionList3.Add((CardAction)new AAttack()
                 {
-                    damage = this.GetDmg(s, 1),
-                    piercing = true,
-                    stunEnemy = true
+                    damage = this.GetDmg(s, 5),
                 });
                 actions = cardActionList3;
                 break;

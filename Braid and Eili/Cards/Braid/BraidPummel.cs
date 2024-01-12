@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Reflection;
 
 namespace KBraid.BraidEili.Cards;
-public class Bap : Card, IModdedCard
+public class BraidPummel : Card, IModdedCard
 {
     public static void Register(IModHelper helper)
     {
-        helper.Content.Cards.RegisterCard("Bap", new()
+        helper.Content.Cards.RegisterCard("Pummel", new()
         {
             CardType = MethodBase.GetCurrentMethod()!.DeclaringType!,
             Meta = new()
@@ -16,18 +16,32 @@ public class Bap : Card, IModdedCard
                 rarity = Rarity.common,
                 upgradesTo = [Upgrade.A, Upgrade.B]
             },
-            Name = ModEntry.Instance.AnyLocalizations.Bind(["card", "Bap", "name"]).Localize
+            Name = ModEntry.Instance.AnyLocalizations.Bind(["card", "Pummel", "name"]).Localize
         });
     }
-    public override string Name() => "Bap";
+    public override string Name() => "Pummel";
 
     public override CardData GetData(State state)
     {
-        return new CardData()
+        CardData data = new CardData();
+        data.cost = 2;
+        data.art = new Spr?(StableSpr.cards_EndlessMagazine);
+        Upgrade upgrade = this.upgrade;
+        bool flag = false;
+        switch (upgrade)
         {
-            cost = 0,
-            art = new Spr?(Spr.cards_colorless),
-        };
+            case Upgrade.None:
+                flag = false;
+                break;
+            case Upgrade.A:
+                flag = false;
+                break;
+            case Upgrade.B:
+                flag = true;
+                break;
+        }
+        data.infinite = flag;
+        return data;
     }
 
     public override List<CardAction> GetActions(State s, Combat c)
@@ -42,6 +56,14 @@ public class Bap : Card, IModdedCard
                 {
                     damage = this.GetDmg(s, 1),
                 });
+                cardActionList1.Add((CardAction)new AAttack()
+                {
+                    damage = this.GetDmg(s, 1),
+                });
+                cardActionList1.Add((CardAction)new AAttack()
+                {
+                    damage = this.GetDmg(s, 1),
+                });
                 actions = cardActionList1;
                 break;
             case Upgrade.A:
@@ -49,10 +71,17 @@ public class Bap : Card, IModdedCard
                 cardActionList2.Add((CardAction)new AAttack()
                 {
                     damage = this.GetDmg(s, 1),
+                    piercing = true
                 });
                 cardActionList2.Add((CardAction)new AAttack()
                 {
                     damage = this.GetDmg(s, 1),
+                    piercing = true
+                });
+                cardActionList2.Add((CardAction)new AAttack()
+                {
+                    damage = this.GetDmg(s, 1),
+                    piercing = true
                 });
                 actions = cardActionList2;
                 break;
@@ -60,8 +89,7 @@ public class Bap : Card, IModdedCard
                 List<CardAction> cardActionList3 = new List<CardAction>();
                 cardActionList3.Add((CardAction)new AAttack()
                 {
-                    damage = this.GetDmg(s, 1),
-                    stunEnemy = true
+                    damage = this.GetDmg(s, 4),
                 });
                 actions = cardActionList3;
                 break;
