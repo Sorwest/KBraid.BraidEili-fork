@@ -2,7 +2,7 @@
   "character": {
     "Eili": {
       "name": "Eili",
-      "description": "<c=42add1>Eili</c>\nA bubbly little fellow who loves to help others with her excentric solutions."
+      "description": "<c=42add1>Eili</c>\nA bubbly little fellow who <c=keyword>loves to help others<c> with her <c=keyword>excentric solutions</c>."
     },
      "Braid": {
       "name": "Braid",

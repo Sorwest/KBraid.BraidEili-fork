@@ -2,14 +2,14 @@
   "ChoiceCardRewardOfYourColorChoice_KB.BraidEili.EiliDeck:0": "Hey guys! i just had the craziest idea!", //Eili happy
   "ChoiceCardRewardOfYourColorChoice_KB.BraidEili.BraidDeck:0": "...", //Braid serious
   
-  "LoseCharacterCard_KB.BraidEili.EiliDeck:0": "Aw... That was my favorite...", //Eili sad
-  "LoseCharacterCard_KB.BraidEili.EiliDeck:1": "To be honest, i acutally wasn't expecting that to work.", //Eili concernded
+  "LoseCharacterCard_KB.BraidEili.EiliDeck_0:0": "Aw... That was my favorite...", //Eili sad
+  "LoseCharacterCard_KB.BraidEili.EiliDeck_1:0": "To be honest, i acutally wasn't expecting that to work.", //Eili concernded
   "LoseCharacterCard_KB.BraidEili.BraidDeck:0": "Survival was more important.", //Braid serious
   
-  "CrystallizedFriendEvent_KB.BraidEili.EiliDeck:0": "Mmmh... is it morning already?", //Eili sad
-  "CrystallizedFriendEvent_KB.BraidEili.EiliDeck:1": "Hello again!", //Eili happy
-  "CrystallizedFriendEvent_KB.BraidEili.BraidDeck:0": "...", //Braid blink
-  "CrystallizedFriendEvent_KB.BraidEili.BraidDeck:1": "What are your orders.", //Braid neutral
+  "CrystallizedFriendEvent_KB.BraidEili.EiliDeck_0:0": "Mmmh... is it morning already?", //Eili sad
+  "CrystallizedFriendEvent_KB.BraidEili.EiliDeck_1:1": "Hello again!", //Eili happy
+  "CrystallizedFriendEvent_KB.BraidEili.BraidDeck_0:0": "...", //Braid blink
+  "CrystallizedFriendEvent_KB.BraidEili.BraidDeck_1:1": "What are your orders.", //Braid neutral
 
   "KB_GrandmaShop_Eili:0": "Brownies!",
   "KB_GrandmaShop_Braid:0": "Ammo.",
@@ -232,15 +232,15 @@
   
   "KB__StrafeHit:0": "",
 
-  "KB_Eili_WeDidOverFiveDamage_0:0a": "Bang Bang Pow!",
-  "KB_Eili_WeDidOverFiveDamage_0:0b": "Love the enthusiasm.",
+  "KB_Eili_WeDidOverFiveDamage_0:0": "Bang Bang Pow!",
+  "KB_Eili_WeDidOverFiveDamage_0:1": "Love the enthusiasm.",
   
   "KB__WeMissedOopsie_0:0": "",
   
   
   
-  "KB_Eili_ThatsALotOfDamageToThem_0:0a": "KILL!! MURDER!!!",
-  "KB_Eili_ThatsALotOfDamageToThem_0:0b": "Whoa! Calm down Eili!",
+  "KB_Eili_ThatsALotOfDamageToThem_0:0": "KILL!! MURDER!!!",
+  "KB_Eili_ThatsALotOfDamageToThem_0:1": "Whoa! Calm down Eili!",
   "KB__ThatsALotOfDamageToUs_0:0": "",
   
   "KB__TheyGotCorroded_0:0": "",

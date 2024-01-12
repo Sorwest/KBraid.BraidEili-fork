@@ -38,41 +38,41 @@ public class BraidLimiterOff : Card, IModdedCard
         {
             case Upgrade.None:
                 List<CardAction> cardActionList1 = new List<CardAction>();
-                cardActionList1.Add((CardAction)new AAttack()
-                {
-                    damage = this.GetDmg(s, 5),
-                });
                 cardActionList1.Add((CardAction)new AHurt()
                 {
                     targetPlayer = true,
                     hurtAmount = 1
                 });
+                cardActionList1.Add((CardAction)new AAttack()
+                {
+                    damage = this.GetDmg(s, 5),
+                });
                 actions = cardActionList1;
                 break;
             case Upgrade.A:
                 List<CardAction> cardActionList2 = new List<CardAction>();
-                cardActionList2.Add((CardAction)new AAttack()
-                {
-                    damage = this.GetDmg(s, 6),
-                });
                 cardActionList2.Add((CardAction)new AHurt()
                 {
                     targetPlayer = true,
                     hurtAmount = 1
                 });
+                cardActionList2.Add((CardAction)new AAttack()
+                {
+                    damage = this.GetDmg(s, 6),
+                });
                 actions = cardActionList2;
                 break;
             case Upgrade.B:
                 List<CardAction> cardActionList3 = new List<CardAction>();
-                cardActionList3.Add((CardAction)new AAttack()
-                {
-                    damage = this.GetDmg(s, 5),
-                    piercing = true
-                });
                 cardActionList3.Add((CardAction)new AHurt()
                 {
                     targetPlayer = true,
                     hurtAmount = 1
+                });
+                cardActionList3.Add((CardAction)new AAttack()
+                {
+                    damage = this.GetDmg(s, 5),
+                    piercing = true
                 });
                 actions = cardActionList3;
                 break;
