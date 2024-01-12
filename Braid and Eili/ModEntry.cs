@@ -48,7 +48,7 @@ public sealed class ModEntry : SimpleMod
     internal static Color BraidColor => new("c0c9e6");
     internal static Color EiliColor => new("42add1");
     internal static Color BraidCardTitleColor => new("000000");
-    internal static Color EiliCardTitleColor => new("292c40");
+    internal static Color EiliCardTitleColor => new("000000");
     internal ISpriteEntry BasicBackground { get; }
     internal ISpriteEntry AApplyTempBrittle_Icon { get; }
     internal ISpriteEntry AApplyTempArmor_Icon { get; }
