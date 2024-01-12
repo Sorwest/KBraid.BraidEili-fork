@@ -559,14 +559,14 @@
       "lines": [
         { "$type": "Say, CobaltCore",
           "who": "eili",
-        "loopTag": "neutral",},
+        "loopTag": "neutral"},
         { "$type": "Say, CobaltCore",
           "who": "braid",
           "loopTag": "neutral",
-        "flipped": true,},
+        "flipped": true},
         { "$type": "Say, CobaltCore",
           "who": "eili",
-        "loopTag": "happy",},
+        "loopTag": "happy"},
       ]
     },
 
