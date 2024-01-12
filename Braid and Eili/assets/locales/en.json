@@ -232,15 +232,15 @@
   
   "KB__StrafeHit:0": "",
 
-  "KB_Eili_WeDidOverFiveDamage_0:0a": "Bang Bang Pow!",
-  "KB_Eili_WeDidOverFiveDamage_0:0b": "Love the enthusiasm.",
+  "KB_Eili_WeDidOverFiveDamage_0:0": "Bang Bang Pow!",
+  "KB_Eili_WeDidOverFiveDamage_0:1": "Love the enthusiasm.",
   
   "KB__WeMissedOopsie_0:0": "",
   
   
   
-  "KB_Eili_ThatsALotOfDamageToThem_0:0a": "KILL!! MURDER!!!",
-  "KB_Eili_ThatsALotOfDamageToThem_0:0b": "Whoa! Calm down Eili!",
+  "KB_Eili_ThatsALotOfDamageToThem_0:0": "KILL!! MURDER!!!",
+  "KB_Eili_ThatsALotOfDamageToThem_0:1": "Whoa! Calm down Eili!",
   "KB__ThatsALotOfDamageToUs_0:0": "",
   
   "KB__TheyGotCorroded_0:0": "",
