@@ -12,12 +12,14 @@
   "status": {
     "DisabledDampeners": {
       "name": "Disabled Dampeners",
-      "description": "Whenever you are hit, gain as much <c=status>EVADE</c> and <c=status>MOVE RANDOM</c>. <c=downside>Decreases by 1 at the start of each turn</c>."
+      "description": [
+        "Whenever you are damaged, gain as much <c=status>EVADE</c> and <c=status>MOVE RANDOM</c> times this status.",
+        "<c=downside>Decreases by 1 at the start of each turn</c>."
+      ]
     },
     "ShockAbsorber": {
       "name": "Shock Absorber",
-      "description": "Whenever you are hit, gain <c=status>TEMP SHIELD NEXT TURN</c> equal to the damage received.",
-      "combatDescription": "Whenever you are hit, gain <c=status>TEMP SHIELD NEXT TURN</c> equal to <c=keyword>x{[Amount]}</c> the damage received."
+      "description": "Whenever you are damaged, gain as much <c=status>TEMP SHIELD NEXT TURN</c> times this status."
     },
     "TempShieldNextTurn": {
       "name": "Temp Shield Next Turn",
@@ -26,11 +28,17 @@
     },
     "KineticGenerator": {
       "name": "Kinetic Generator",
-      "description": "Gain <c=status>TEMP SHIELD</c> for any and all distance moved. <c=downside>Decreases by 1 each turn</c>."
+      "description": [
+        "Gain <c=status>TEMP SHIELD</c> for any and all distance moved.",
+        "<c=downside>Decreases by 1 at the start of each turn</c>."
+      ]
     },
     "EqualPayback": {
       "name": "Equal Payback",
-      "description": "Whenever this ship is hit, it immediately fires a shot of equal damage. <c=downsideDecreases by 1 at the start of each turn</c>."
+      "description": [
+        "Whenever this ship is hit, it immediately fires a shot of equal damage.",
+        "<c=downside>Decreases by 1 at the start of each turn</c>."
+      ]
     },
     "TempPowerdrive": {
       "name": "Temp Powerdrive",
