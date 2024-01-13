@@ -10,18 +10,19 @@ using System.Linq;
 namespace KBraid.BraidEili;
 
 /* TO-DO
- * DisabledDampeners Status -keep track of X damage taken, gain X*status Evade, move X*status random. Decrease 1 on turn start
- *                      WAITING FOR A FIX
- * ShockAbsorber Status -keep track of X damage taken, gain X*status TempShieldNextTurn
- * TempShieldNextTurn Status
- * KineticGenerator Status -keep track of X movement amounts, give X*status temp shield accordingly
- * AApplyTempBrittle Action -if IsRandom, choose random enemy part and give it new TempBrittle. if !IsRandom, part in front of active cannon gets it, remove TempBrittle on hit
+ * DONE : DisabledDampeners Status -keep track of X damage taken, gain X*status Evade, move X*status random. Decrease 1 on turn start
+ * DONE : ShockAbsorber Status -keep track of X damage taken, gain X*status TempShieldNextTurn
+ * DONE : TempShieldNextTurn Status
+ * DONE : KineticGenerator Status -keep track of X movement amounts, give X*status temp shield accordingly. Decrease 1 on turn start
+ * DONE : EqualPayback Status -keep track of all damage taken, fire the value*status. Decrease by 1 on turn start
+ * AApplyTempBrittle Action 
+ *                      -if IsRandom, choose random enemy part and give it new TempBrittle.
+ *                      -if !IsRandom, part in front of active cannon gets it, remove TempBrittle on hit
  * -new TempBrittle dmg modifier
  * AApplyTempArmor Action -keep track of current part dmg modifiers, apply new TempArmor dmg modifier until start of turn
  * -new TempArmor dmg modifier
  * Make Inspiration Action -select card, remove exhaust from card
  * ALaunchMidrow Action -find a way to add enemy intent mid-turn, active specific intents
- * EqualPayback Status -keep track of all damage taken, fire the value, decrease by 1 on turn start
  * TempPowerdrive Status -powerdrive, lose all stacks on turn end
  * Bide Status -keep track of all damage taken, add value to next attack, remove bide
  * ASacrifice Action -select card, exhaust card, keep int of card cost, return it
@@ -193,8 +194,8 @@ public sealed class ModEntry : SimpleMod
         Instance = this;
         Harmony = new(package.Manifest.UniqueName);
         KokoroApi = helper.ModRegistry.GetApi<IKokoroApi>("Shockah.Kokoro")!;
-        KokoroApi.RegisterTypeForExtensionData(typeof(AHurt));
-        KokoroApi.RegisterTypeForExtensionData(typeof(AAttack));
+        //KokoroApi.RegisterTypeForExtensionData(typeof(AHurt));
+        //KokoroApi.RegisterTypeForExtensionData(typeof(AAttack));
         //KokoroApi.RegisterCardRenderHook(new SpacingCardRenderHook(), 0);
 
         // Make stuff do stuff
@@ -270,7 +271,8 @@ public sealed class ModEntry : SimpleMod
             Definition = new()
             {
                 icon = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/sprites/icons/disabledDampeners.png")).Sprite,
-                color = new("42add1")
+                color = new("42add1"),
+                isGood = true
             },
             Name = this.AnyLocalizations.Bind(["status", "DisabledDampeners", "name"]).Localize,
             Description = this.AnyLocalizations.Bind(["status", "DisabledDampeners", "description"]).Localize
@@ -280,7 +282,8 @@ public sealed class ModEntry : SimpleMod
             Definition = new()
             {
                 icon = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/sprites/icons/shockAbsorber.png")).Sprite,
-                color = new("42add1")
+                color = new("42add1"),
+                isGood = true
             },
             Name = this.AnyLocalizations.Bind(["status", "ShockAbsorber", "name"]).Localize,
             Description = this.AnyLocalizations.Bind(["status", "ShockAbsorber", "description"]).Localize
@@ -289,8 +292,9 @@ public sealed class ModEntry : SimpleMod
         {
             Definition = new()
             {
-                icon = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/sprites/icons/shockAbsorber.png")).Sprite,//tempShieldNextTurn.png")).Sprite,
-                color = new("42add1")
+                icon = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/sprites/icons/tempShieldNextTurn.png")).Sprite,
+                color = new("42add1"),
+                isGood = true
             },
             Name = this.AnyLocalizations.Bind(["status", "TempShieldNextTurn", "name"]).Localize,
             Description = this.AnyLocalizations.Bind(["status", "TempShieldNextTurn", "description"]).Localize
@@ -300,7 +304,8 @@ public sealed class ModEntry : SimpleMod
             Definition = new()
             {
                 icon = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/sprites/icons/kineticGenerator.png")).Sprite,
-                color = new("42add1")
+                color = new("42add1"),
+                isGood = true
             },
             Name = this.AnyLocalizations.Bind(["status", "KineticGenerator", "name"]).Localize,
             Description = this.AnyLocalizations.Bind(["status", "KineticGenerator", "description"]).Localize
@@ -310,7 +315,8 @@ public sealed class ModEntry : SimpleMod
             Definition = new()
             {
                 icon = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/sprites/icons/equalPayback.png")).Sprite,
-                color = new("c0c9e6")
+                color = new("c0c9e6"),
+                isGood = true
             },
             Name = this.AnyLocalizations.Bind(["status", "EqualPayback", "name"]).Localize,
             Description = this.AnyLocalizations.Bind(["status", "EqualPayback", "description"]).Localize
@@ -320,7 +326,8 @@ public sealed class ModEntry : SimpleMod
             Definition = new()
             {
                 icon = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/sprites/icons/tempPowerdrive.png")).Sprite,
-                color = new("c0c9e6")
+                color = new("c0c9e6"),
+                isGood = true
             },
             Name = this.AnyLocalizations.Bind(["status", "TempPowerdrive", "name"]).Localize,
             Description = this.AnyLocalizations.Bind(["status", "TempPowerdrive", "description"]).Localize
@@ -330,7 +337,8 @@ public sealed class ModEntry : SimpleMod
             Definition = new()
             {
                 icon = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/sprites/icons/bide.png")).Sprite,
-                color = new("c0c9e6")
+                color = new("c0c9e6"),
+                isGood = true
             },
             Name = this.AnyLocalizations.Bind(["status", "Bide", "name"]).Localize,
             Description = this.AnyLocalizations.Bind(["status", "Bide", "description"]).Localize
@@ -744,5 +752,8 @@ public sealed class ModEntry : SimpleMod
                 ]
             }
         );
+
+        // TRANSPILER STUFF
+        _ = new EqualPaybackManager();
     }
 }

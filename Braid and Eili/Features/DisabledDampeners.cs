@@ -1,4 +1,6 @@
 ﻿using HarmonyLib;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace KBraid.BraidEili;
 internal sealed class DisabledDampenersManager : IStatusLogicHook
@@ -32,19 +34,20 @@ internal sealed class DisabledDampenersManager : IStatusLogicHook
             var shl = __instance.Get(Status.shield) + __instance.Get(Status.tempShield);
             if (shl > 0)
             {
+                var disabledDampeners = ModEntry.Instance.DisabledDampeners.Status;
+                __instance.PulseStatus(disabledDampeners);
                 c.QueueImmediate(new AStatus()
                 {
                     status = Status.evade,
-                    statusAmount = shl,
+                    statusAmount = shl * __instance.Get(disabledDampeners),
                     targetPlayer = __instance.isPlayerShip
                 });
                 c.QueueImmediate(new AMove()
                 {
-                    dir = shl,
+                    dir = shl * __instance.Get(disabledDampeners),
                     isRandom = true,
                     targetPlayer = __instance.isPlayerShip
                 });
-                __instance.PulseStatus(ModEntry.Instance.DisabledDampeners.Status);
             }
         }
         return;
@@ -59,20 +62,21 @@ internal sealed class DisabledDampenersManager : IStatusLogicHook
             return;
         if (__instance.Get(ModEntry.Instance.DisabledDampeners.Status) <= 0)
             return;
-        
+        var disabledDampeners = ModEntry.Instance.DisabledDampeners.Status;
+        __instance.PulseStatus(disabledDampeners);
         c.QueueImmediate(new AStatus()
         {
             status = Status.evade,
-            statusAmount = amt,
+            statusAmount = amt * __instance.Get(disabledDampeners),
             targetPlayer = __instance.isPlayerShip
         });
         c.QueueImmediate(new AMove()
         {
-            dir = amt,
+            dir = amt * __instance.Get(disabledDampeners),
             isRandom = true,
             targetPlayer = __instance.isPlayerShip
         });
-        __instance.PulseStatus(ModEntry.Instance.DisabledDampeners.Status);
+        return;
     }
     public bool HandleStatusTurnAutoStep(State state, Combat combat, StatusTurnTriggerTiming timing, Ship ship, Status status, ref int amount, ref StatusTurnAutoStepSetStrategy setStrategy)
     {
