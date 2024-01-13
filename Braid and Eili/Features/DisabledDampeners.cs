@@ -21,10 +21,7 @@ internal sealed class DisabledDampenersManager : IStatusLogicHook
 
     private static void Ship_NormalDamage_Prefix(
         Ship __instance,
-        State s,
         Combat c,
-        int incomingDamage,
-        int? maybeWorldGridX,
         bool piercing = false)
     {
         if (__instance.Get(ModEntry.Instance.DisabledDampeners.Status) <= 0)
@@ -54,7 +51,6 @@ internal sealed class DisabledDampenersManager : IStatusLogicHook
     }
     private static void Ship_DirectHullDamage_Prefix(
         Ship __instance,
-        State s,
         Combat c,
         int amt)
     {

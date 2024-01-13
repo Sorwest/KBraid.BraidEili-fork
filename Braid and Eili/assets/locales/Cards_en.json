@@ -15,16 +15,21 @@
       "description": [
         "Whenever you are damaged, gain as much <c=status>EVADE</c> and <c=status>MOVE RANDOM</c> times this status.",
         "<c=downside>Decreases by 1 at the start of each turn</c>."
+      ],
+      "combatDescription": [
+        "Whenever you are damaged, gain as much <c=status>EVADE</c> <c=boldPink>x{{Amount}}</c> and <c=status>MOVE RANDOM</c> <c=boldPink>x{{Amount}}</c>.",
+        "<c=downside>Decreases by 1 at the start of each turn</c>."
       ]
     },
     "ShockAbsorber": {
       "name": "Shock Absorber",
-      "description": "Whenever you are damaged, gain as much <c=status>TEMP SHIELD NEXT TURN</c> times this status."
+      "description": "Whenever you are damaged, gain as much <c=status>TEMP SHIELD NEXT TURN</c> times this status.",
+      "combatDescription": "Whenever you are damaged, gain as much <c=status>TEMP SHIELD NEXT TURN</c> <c=boldPink>x{{Amount}}</c>."
     },
     "TempShieldNextTurn": {
       "name": "Temp Shield Next Turn",
       "description": "At the start of next turn, gain <c=status>TEMP SHIELD</c>.",
-      "combatDescription": "At the start of next turn, gain <c=keyword>{[Amount]}</c> <c=status>TEMP SHIELD</c>."
+      "combatDescription": "At the start of next turn, gain <c=boldPink>{[Amount]}</c> <c=status>TEMP SHIELD</c>."
     },
     "KineticGenerator": {
       "name": "Kinetic Generator",
@@ -43,11 +48,23 @@
     "TempPowerdrive": {
       "name": "Temp Powerdrive",
       "description": "Add damage to all attacks. <c=downside>Goes away at end of turn</c>.",
-      "combatDescription": "Add <c=keyword>{{Amount}}</c> damage to all attacks. <c=downside>Goes away at end of turn</c>."
+      "combatDescription": "Add <c=boldPink>{{Amount}}</c> damage to all attacks. <c=downside>Goes away at end of turn</c>."
     },
     "Bide": {
       "name": "Bide",
-      "description": "Damage received is stored and added to next <c=keyword>attack</c>."
+      "description": [
+        "Damage received is stored as <c=status>PERFECT TIMING</c>.",
+        "<c=downside>Decreases by 1 after each attack."
+      ]
+    },
+    "PerfectTiming": {
+      "name": "Perfect Timing",
+      "description": "The next attack deals additional damage.",
+      "combatDescription": "The next <c=attack>attack</c> deals <c=boldPink>{{Amount}}</c> additional damage."
+    },
+    "LostHull": {
+      "name": "Lost Hull",
+      "description": "The amount of hull this ship has lost this combat."
     }
   },
   "artifact": {
@@ -219,10 +236,10 @@
     "Revenge": {
       "name": "Revenge",
       "description": {
-        "None": "Pierce attack. Dmg = Hull lost this combat.{{Amount}}",
-        "A": "Pierce attack. Dmg = Hull lost this combat.{{Amount}}",
+        "None": "Pierce. Dmg = Hull lost this combat.{{Amount}}",
+        "A": "Pierce. Dmg = Hull lost this combat.{{Amount}}",
         "B": [
-          "Pierce attack. Dmg = Hull lost this combat. {{Amount}}",
+          "Pierce. Dmg = Hull lost this combat. {{Amount}}",
           "Apply <c=redd>Brittle</c>."
         ]
       }

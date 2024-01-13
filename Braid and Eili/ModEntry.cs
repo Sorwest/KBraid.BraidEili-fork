@@ -15,22 +15,26 @@ namespace KBraid.BraidEili;
  * DONE : TempShieldNextTurn Status
  * DONE : KineticGenerator Status -keep track of X movement amounts, give X*status temp shield accordingly. Decrease 1 on turn start
  * DONE : EqualPayback Status -keep track of all damage taken, fire the value*status. Decrease by 1 on turn start
+ * DONE : TempPowerdrive Status -powerdrive, lose all stacks on turn end
+ * DONE : Bide Status -keep track of X damage taken, gain X Biding My Time. Decrease 1 on turn start
+ * DONE : Perfect Timing status -powerdrive, lose all stacks on use
+ * DONE : Make Revenge Action -find a way to keep track of lost hull during combat
+ * DONE : SOLUTION: Lost Hull status
+ * 
+ * REMAINING STUFF TO-DO
+ * Make Inspiration Action -select card, remove exhaust from card
+ * ASacrifice Action -select card, exhaust card, keep int of card cost, return it
+ * Make Resolve Action -X = Solid Ship parts
+ *                      Survive X
+ *                      (Weak applied to damaged tile, Brittle if already Weak. Max Hull decreased by damage taken. Ship is destroyed if Max Hull reaches 0)
+ * Make Retreat Action -find a way to access PlayerWon(g) and flag it noRewards = true
  * AApplyTempBrittle Action 
  *                      -if IsRandom, choose random enemy part and give it new TempBrittle.
  *                      -if !IsRandom, part in front of active cannon gets it, remove TempBrittle on hit
  * -new TempBrittle dmg modifier
  * AApplyTempArmor Action -keep track of current part dmg modifiers, apply new TempArmor dmg modifier until start of turn
  * -new TempArmor dmg modifier
- * Make Inspiration Action -select card, remove exhaust from card
  * ALaunchMidrow Action -find a way to add enemy intent mid-turn, active specific intents
- * TempPowerdrive Status -powerdrive, lose all stacks on turn end
- * Bide Status -keep track of all damage taken, add value to next attack, remove bide
- * ASacrifice Action -select card, exhaust card, keep int of card cost, return it
- * Make Revenge Action -find a way to keep track of lost hull during combat
- * Make Resolve Action -X = Solid Ship parts
- *                      Survive X
- *                      (Weak applied to damaged tile, Brittle if already Weak. Max Hull decreased by damage taken. Ship is destroyed if Max Hull reaches 0)
- * Make Retreat Action -find a way to access PlayerWon(g) and flag it noRewards = true
  * Eili Artifacts
  * Braid Artifacts
  * Unlock Req:   Eili : Win 5 times
@@ -60,6 +64,8 @@ public sealed class ModEntry : SimpleMod
     internal IStatusEntry EqualPayback { get; }
     internal IStatusEntry TempPowerdrive { get; }
     internal IStatusEntry Bide { get; }
+    internal IStatusEntry PerfectTiming { get; }
+    internal IStatusEntry LostHull { get; }
     internal IList<string> faceSprites { get; } = [
         "blink",
         "crystallized",
@@ -203,6 +209,10 @@ public sealed class ModEntry : SimpleMod
         _ = new ShockAbsorberManager();
         _ = new TempShieldNextTurnManager();
         _ = new KineticGeneratorManager();
+        _ = new TempPowerdriveManager();
+        _ = new BideManager();
+        _ = new PerfectTimingManager();
+        _ = new LostHullManager();
 
         CustomTTGlossary.ApplyPatches(Harmony);
         
@@ -342,6 +352,27 @@ public sealed class ModEntry : SimpleMod
             },
             Name = this.AnyLocalizations.Bind(["status", "Bide", "name"]).Localize,
             Description = this.AnyLocalizations.Bind(["status", "Bide", "description"]).Localize
+        });
+        PerfectTiming = Helper.Content.Statuses.RegisterStatus("PerfectTiming", new()
+        {
+            Definition = new()
+            {
+                icon = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/sprites/icons/perfectTiming.png")).Sprite,
+                color = new("c0c9e6"),
+                isGood = true
+            },
+            Name = this.AnyLocalizations.Bind(["status", "PerfectTiming", "name"]).Localize,
+            Description = this.AnyLocalizations.Bind(["status", "PerfectTiming", "description"]).Localize
+        });
+        LostHull = Helper.Content.Statuses.RegisterStatus("LostHull", new()
+        {
+            Definition = new()
+            {
+                icon = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/sprites/icons/lostHull.png")).Sprite,
+                color = new("c0c9e6")
+            },
+            Name = this.AnyLocalizations.Bind(["status", "LostHull", "name"]).Localize,
+            Description = this.AnyLocalizations.Bind(["status", "LostHull", "description"]).Localize
         });
         // Register cards
         foreach (var cardType in BraidCardTypes)
