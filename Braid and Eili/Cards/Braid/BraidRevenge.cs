@@ -29,7 +29,10 @@ public class BraidRevenge : Card, IModdedCard
         data.singleUse = upgrade == Upgrade.B ? true : false;
         data.retain = upgrade == Upgrade.A ? true : false;
         data.art = new Spr?(StableSpr.cards_Scattershot);
-        data.description = ModEntry.Instance.Localizations.Localize(["card", "Revenge", "description", upgrade.ToString()]);
+        var str = "";
+        if (state.route is Combat)
+            str = string.Format("\n<c=boldPink>{0}</c>.",GetDmg(state, state.ship.Get(ModEntry.Instance.LostHull.Status)));
+        data.description = ModEntry.Instance.Localizations.Localize(["card", "Revenge", "description", upgrade.ToString()], new { Amount = str });
         return data;
     }
 
@@ -43,7 +46,7 @@ public class BraidRevenge : Card, IModdedCard
                 {
                     new AAttack()
                     {
-                        damage = GetDmg(s, s.ship.hullMax - s.ship.hull),
+                        damage = GetDmg(s, s.ship.Get(ModEntry.Instance.LostHull.Status)),
                         piercing = true,
                     }
                 };
@@ -54,7 +57,7 @@ public class BraidRevenge : Card, IModdedCard
                 {
                     new AAttack()
                     {
-                        damage = GetDmg(s, s.ship.hullMax - s.ship.hull),
+                        damage = GetDmg(s, s.ship.Get(ModEntry.Instance.LostHull.Status)),
                         piercing = true,
                     }
                 };
@@ -65,7 +68,7 @@ public class BraidRevenge : Card, IModdedCard
                 {
                     new AAttack()
                     {
-                        damage = GetDmg(s, s.ship.hullMax - s.ship.hull),
+                        damage = GetDmg(s, s.ship.Get(ModEntry.Instance.LostHull.Status)),
                         piercing = true,
                         brittle = true,
                     }

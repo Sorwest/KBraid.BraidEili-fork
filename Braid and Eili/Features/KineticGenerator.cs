@@ -17,8 +17,7 @@ internal sealed class KineticGeneratorManager : IStatusLogicHook
         );
     }
     private static void AMove_Begin_Postfix(
-        AMove __instance, 
-        G g,
+        AMove __instance,
         State s,
         Combat c)
     {
