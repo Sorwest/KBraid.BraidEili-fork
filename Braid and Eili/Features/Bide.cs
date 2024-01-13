@@ -27,7 +27,7 @@ internal sealed class BideManager : IStatusLogicHook
         int? maybeWorldGridX,
         bool piercing = false)
     {
-        if (__instance.Get(ModEntry.Instance.PerfectTiming.Status) <= 0)
+        if (__instance.Get(ModEntry.Instance.Bide.Status) <= 0)
             return;
         if (!piercing)
         {
@@ -54,7 +54,7 @@ internal sealed class BideManager : IStatusLogicHook
     {
         if (__instance.hull <= 0 || amt <= 0 || __instance.Get(Status.perfectShield) > 0)
             return;
-        if (__instance.Get(ModEntry.Instance.PerfectTiming.Status) <= 0)
+        if (__instance.Get(ModEntry.Instance.Bide.Status) <= 0)
             return;
         var bide = ModEntry.Instance.Bide.Status;
         __instance.PulseStatus(bide);

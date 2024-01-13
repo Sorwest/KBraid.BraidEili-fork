@@ -65,6 +65,14 @@
     "LostHull": {
       "name": "Lost Hull",
       "description": "The amount of hull this ship has lost this combat."
+    },
+    "Resolve": {
+      "name": "Resolve",
+      "description": "If you would take lethal damage, instead set your hull to 1 and lose <c=hurt>max hull</c> equal to the overflow."
+    },
+    "Retreat": {
+      "name": "Retreat",
+      "description": "<c=keyword>End combat on turn start</c> and skip all rewards."
     }
   },
   "artifact": {
@@ -233,6 +241,10 @@
     "Sacrifice": {
       "name": "Sacrifice"
     },
+    "Retreat": {
+      "name": "Retreat",
+      "description": "<c=keyword>Escape</c> next turn. <c=downside>Cannot be played during boss battles</c>."
+    },
     "Revenge": {
       "name": "Revenge",
       "description": {
@@ -249,10 +261,6 @@
     },
     "Resolve": {
       "name": "Resolve"
-    },
-    "Retreat": {
-      "name": "Retreat",
-      "description": "<c=keyword>End combat</c> next turn and skip all rewards. <c=downside>Cannot be played during boss battles</c>."
     }
   }
 }

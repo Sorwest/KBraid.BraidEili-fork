@@ -43,11 +43,12 @@ public class BraidMaxBlast : Card, IModdedCard
                     {
                         hand = true,
                         handAmount = myDamage,
+                        omitFromTooltips = true
                     },
                     new AAttack()
                     {
                         damage = GetDmg(s,myDamage),
-                        xHint = 1
+                        xHint = 0
                     }
                 };
                 actions = cardActionList1;
@@ -59,12 +60,13 @@ public class BraidMaxBlast : Card, IModdedCard
                     {
                         hand = true,
                         handAmount = myDamage,
+                        omitFromTooltips = true
                     },
                     new AAttack()
                     {
                         damage = GetDmg(s,myDamage),
                         piercing = true,
-                        xHint = 1
+                        xHint = 0
                     }
                 };
                 actions = cardActionList2;
@@ -76,12 +78,13 @@ public class BraidMaxBlast : Card, IModdedCard
                     {
                         hand = true,
                         handAmount = myDamage,
+                        omitFromTooltips = true
                     },
                     new AAttack()
                     {
                         damage = GetDmg(s,myDamage),
                         stunEnemy = true,
-                        xHint = 1
+                        xHint = 0
                     }
                 };
                 actions = cardActionList3;

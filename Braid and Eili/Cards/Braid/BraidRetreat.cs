@@ -28,15 +28,25 @@ public class BraidRetreat : Card, IModdedCard
         data.exhaust = upgrade == Upgrade.B ? true : false;
         data.singleUse = upgrade == Upgrade.B ? false : true;
         data.art = new Spr?(StableSpr.cards_Scattershot);
-        data.description = ModEntry.Instance.Localizations.Localize(["card", "Retreat", "description", upgrade.ToString()]);
+        data.description = ModEntry.Instance.Localizations.Localize(["card", "Retreat", "description"]);
+        if (state.map.markers[state.map.currentLocation].contents is MapBattle contents)
+        {
+            if (contents.battleType == BattleType.Boss)
+                data.unplayable = true;
+        }
         return data;
     }
 
     public override List<CardAction> GetActions(State s, Combat c)
     {
         List<CardAction> actions = new()
-        { 
-        
+        {
+            new AStatus()
+            {
+                status = ModEntry.Instance.Retreat.Status,
+                statusAmount = 1,
+                targetPlayer = true
+            }
         };
         return actions;
     }

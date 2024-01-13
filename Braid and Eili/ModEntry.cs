@@ -17,17 +17,14 @@ namespace KBraid.BraidEili;
  * DONE : EqualPayback Status -keep track of all damage taken, fire the value*status. Decrease by 1 on turn start
  * DONE : TempPowerdrive Status -powerdrive, lose all stacks on turn end
  * DONE : Bide Status -keep track of X damage taken, gain X Biding My Time. Decrease 1 on turn start
- * DONE : Perfect Timing status -powerdrive, lose all stacks on use
+ * DONE : Perfect Timing Status -powerdrive, lose all stacks on use
  * DONE : Make Revenge Action -find a way to keep track of lost hull during combat
- * DONE : SOLUTION: Lost Hull status
- * 
+ * DONE : SOLUTION: Lost Hull Status
+ * DONE : Resolve Status -when hit, if you would drop below 1 hull, instead lose max hull
  * REMAINING STUFF TO-DO
+ * Make Retreat Action -find a way to access PlayerWon(g) and flag it noRewards = true
  * Make Inspiration Action -select card, remove exhaust from card
  * ASacrifice Action -select card, exhaust card, keep int of card cost, return it
- * Make Resolve Action -X = Solid Ship parts
- *                      Survive X
- *                      (Weak applied to damaged tile, Brittle if already Weak. Max Hull decreased by damage taken. Ship is destroyed if Max Hull reaches 0)
- * Make Retreat Action -find a way to access PlayerWon(g) and flag it noRewards = true
  * AApplyTempBrittle Action 
  *                      -if IsRandom, choose random enemy part and give it new TempBrittle.
  *                      -if !IsRandom, part in front of active cannon gets it, remove TempBrittle on hit
@@ -66,6 +63,8 @@ public sealed class ModEntry : SimpleMod
     internal IStatusEntry Bide { get; }
     internal IStatusEntry PerfectTiming { get; }
     internal IStatusEntry LostHull { get; }
+    internal IStatusEntry Resolve { get; }
+    internal IStatusEntry Retreat { get; }
     internal IList<string> faceSprites { get; } = [
         "blink",
         "crystallized",
@@ -213,6 +212,8 @@ public sealed class ModEntry : SimpleMod
         _ = new BideManager();
         _ = new PerfectTimingManager();
         _ = new LostHullManager();
+        _ = new ResolveManager();
+        _ = new RetreatManager();
 
         CustomTTGlossary.ApplyPatches(Harmony);
         
@@ -373,6 +374,28 @@ public sealed class ModEntry : SimpleMod
             },
             Name = this.AnyLocalizations.Bind(["status", "LostHull", "name"]).Localize,
             Description = this.AnyLocalizations.Bind(["status", "LostHull", "description"]).Localize
+        });
+        Resolve = Helper.Content.Statuses.RegisterStatus("Resolve", new()
+        {
+            Definition = new()
+            {
+                icon = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/sprites/icons/resolve.png")).Sprite,
+                color = new("c0c9e6"),
+                isGood = true
+            },
+            Name = this.AnyLocalizations.Bind(["status", "Resolve", "name"]).Localize,
+            Description = this.AnyLocalizations.Bind(["status", "Resolve", "description"]).Localize
+        });
+        Retreat = Helper.Content.Statuses.RegisterStatus("Retreat", new()
+        {
+            Definition = new()
+            {
+                icon = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/sprites/icons/retreat.png")).Sprite,
+                color = new("c0c9e6"),
+                isGood = true
+            },
+            Name = this.AnyLocalizations.Bind(["status", "Retreat", "name"]).Localize,
+            Description = this.AnyLocalizations.Bind(["status", "Retreat", "description"]).Localize
         });
         // Register cards
         foreach (var cardType in BraidCardTypes)

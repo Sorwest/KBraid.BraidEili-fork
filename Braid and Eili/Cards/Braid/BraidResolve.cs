@@ -46,7 +46,12 @@ public class BraidResolve : Card, IModdedCard
     {
         List<CardAction> actions = new()
         {
-
+            new AStatus()
+            {
+                status = ModEntry.Instance.Resolve.Status,
+                statusAmount = 1,
+                targetPlayer = true
+            }
         };
         return actions;
     }
